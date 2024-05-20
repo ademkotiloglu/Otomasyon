@@ -34,6 +34,8 @@ namespace DXApplication2.Modul_Fatura
         string ID2 = "AII";
         int BankaID = -1;
         int KasaID = -1;
+        int deneme = -1;
+
 
         public frmAlisIade(bool Ac, int ID, bool Irsaliye)
         {
@@ -127,9 +129,46 @@ namespace DXApplication2.Modul_Fatura
                     OdemeID = Fatura.ODEMEYERIID.Value;
                 }
                 else if (Fatura.ODEMEYERIID < 1) txtFaturaTuru.SelectedIndex = 0;
+                if (Fatura.KasaOk == "True")
+                { checkBox1.Checked = true; }
+                if (Fatura.KasaOk == "False")
+                { checkBox1.Checked = false; }
+                if (Fatura.BankaOk == "True")
+                { checkBox2.Checked = true; }
+                if (Fatura.BankaOk == "False")
+                { checkBox2.Checked = false; }
+                if (Fatura.CariOk == "True")
+                { checkBox3.Checked = true; }
+                if (Fatura.CariOk == "False")
+                { checkBox3.Checked = false; }
+                if (Fatura.StokOk == "True")
+                { checkBox4.Checked = true; }
+                if (Fatura.StokOk == "False")
+                { checkBox4.Checked = false; }
                 txtİrsaliyeNo.Text = db.TBL_IRSALIYELERs.First(s => s.ID == Fatura.IRSALIYEID.Value).IRSALIYENO;
                 txtIrsaliyeTarih.EditValue = db.TBL_IRSALIYELERs.First(s => s.ID == Fatura.IRSALIYEID.Value).TARIHI.Value.ToShortDateString();
                 txtCariAdi.Text = db.TBL_CARILERs.First(s => s.CARIKODU == Fatura.CARIKODU).CARIADI;
+                label18.Text = db.TBL_CARILERs.First(s => s.CARIKODU == Fatura.CARIKODU).ID.ToString();
+
+                if (Fatura.ODEMEYERI == "Kasa")
+                {
+
+                    label19.Text = db.TBL_KASALARs.First(s => s.ID == Fatura.ODEMEYERIID).ID.ToString();
+
+                }
+                if (Fatura.ODEMEYERI == "Banka")
+                {
+                    label20.Text = db.TBL_BANKALARs.First(s => s.ID == Fatura.ODEMEYERIID).ID.ToString();
+
+                }
+                var bankaHareket = db.TBL_BANKAHAREKETLERIs.FirstOrDefault(b => b.EVRAKID == FaturaID);
+                var kasaHareket1 = db.TBL_KASAHAREKETLERIs.FirstOrDefault(k => k.EVRAKID == FaturaID);
+                if (bankaHareket != null) { checkBox6.Checked = true; }
+                else if (bankaHareket == null) { checkBox6.Checked = false; }
+                if (kasaHareket1 != null) { checkBox5.Checked = true; }
+                else if (kasaHareket1 == null) { checkBox5.Checked = false; }
+
+
                 txtCariKodu.Text = Fatura.CARIKODU;
                 txtFaturaTarihi.EditValue = Fatura.TARIHI.Value.ToShortDateString();
                 var srg = from s in db.VW_KALEMLERs
@@ -221,9 +260,13 @@ namespace DXApplication2.Modul_Fatura
                 txtHesapAdi.Enabled = false;
                 txtHesapNo.Enabled = false;
                 txtKasaAdi.Enabled = false;
+                txtHesapAdi.Text = "";
+                txtHesapNo.Text = "";
                 txtKasaKodu.Enabled = true;
                 checkBox1.Enabled = true;
                 checkBox2.Enabled = false;
+                checkBox2.Checked = false;
+
                 OdemeYeri = txtOdemeYeri.Text;
 
             }
@@ -234,8 +277,11 @@ namespace DXApplication2.Modul_Fatura
                 txtHesapNo.Enabled = false;
                 txtKasaAdi.Enabled = false;
                 txtKasaKodu.Enabled = false;
+                txtKasaAdi.Text = "";
+                txtKasaKodu.Text = "";
                 OdemeYeri = txtOdemeYeri.Text;
                 checkBox1.Enabled = false;
+                checkBox1.Checked = false;
                 checkBox2.Enabled = true;
             }
         }
@@ -254,7 +300,43 @@ namespace DXApplication2.Modul_Fatura
                 fatura.GENELTOPLAM = decimal.Parse(txtGenelToplam.Text);
                 fatura.IRSALIYEID = IrsaliyeID;
                 fatura.ODEMEYERI = OdemeYeri;
-                fatura.ODEMEYERIID = OdemeID;
+                if (txtOdemeYeri.Text == "Kasa")
+                    fatura.ODEMEYERIID = KasaID;
+                if (txtOdemeYeri.Text == "Banka")
+                    fatura.ODEMEYERIID = BankaID;
+                fatura.TARIHI = DateTime.Parse(txtFaturaTarihi.Text);
+                if (checkBox1.Checked == true)
+                {
+                    fatura.KasaOk = "True";
+                }
+                if (checkBox1.Checked == false)
+                {
+                    fatura.KasaOk = "False";
+                }
+                if (checkBox2.Checked == true)
+                {
+                    fatura.BankaOk = "True";
+                }
+                if (checkBox2.Checked == false)
+                {
+                    fatura.BankaOk = "False";
+                }
+                if (checkBox3.Checked == true)
+                {
+                    fatura.CariOk = "True";
+                }
+                if (checkBox3.Checked == false)
+                {
+                    fatura.CariOk = "False";
+                }
+                if (checkBox4.Checked == true)
+                {
+                    fatura.StokOk = "True";
+                }
+                if (checkBox4.Checked == false)
+                {
+                    fatura.StokOk = "False";
+                }
                 fatura.TARIHI = DateTime.Parse(txtFaturaTarihi.Text);
                 fatura.SAVEUSER = AnaForm.UserID;
                 fatura.SAVEDATE = DateTime.Now;
@@ -282,7 +364,10 @@ namespace DXApplication2.Modul_Fatura
                     stokhareket[i] = new Fonksiyonlar.TBL_STOKHAREKETLERI();
                     stokhareket[i].BIRIMFIYAT = decimal.Parse(gridView1.GetRowCellValue(i, "BIRIMFIYAT").ToString());
                     stokhareket[i].FATURAID = fatura.ID;
-                    stokhareket[i].GCKODU = "C";
+                    if (checkBox4.Checked == true)
+                        stokhareket[i].GCKODU = "C";
+                    if (checkBox4.Checked == false)
+                        stokhareket[i].GCKODU = "";
                     stokhareket[i].IRSALIYEID = IrsaliyeID;
                     stokhareket[i].KDV = decimal.Parse(gridView1.GetRowCellValue(i, "KDV").ToString());
                     stokhareket[i].MIKTAR = int.Parse(gridView1.GetRowCellValue(i, "MIKTAR").ToString());
@@ -291,66 +376,70 @@ namespace DXApplication2.Modul_Fatura
                     stokhareket[i].SAVEDATE = DateTime.Now;
                     stokhareket[i].SAVEUSER = AnaForm.UserID;
                     db.TBL_STOKHAREKETLERIs.InsertOnSubmit(stokhareket[i]);
-                }
-                db.SubmitChanges();
-                Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = new Fonksiyonlar.TBL_CARIHAREKETLERI();
-                carihareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Alış İade Faturası";
-                if (txtFaturaTuru.SelectedIndex == 0)
-                {
-                    carihareket.ALACAK = 0;
-                    carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
-                      }
-                else if (txtFaturaTuru.SelectedIndex == 1)
-                {
-                    carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
-                    carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
-                }
-                carihareket.CARIID = CariID;
-                carihareket.TARIH = DateTime.Now;
-                carihareket.TIPI = "AIF";
-                carihareket.EVRAKTURU = "Alış İade Faturası";
-                carihareket.EVRAKID = fatura.ID;
-                carihareket.SAVEDATE = DateTime.Now;
-                carihareket.SAVEUSER = AnaForm.UserID;
-                db.TBL_CARIHAREKETLERIs.InsertOnSubmit(carihareket);
-                db.SubmitChanges();
-                Mesajlar.yenikayit("Yeni Fatura Başarıyla Kayıt Edildi");
-                if (checkBox1.Checked)
-                {
-                    Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
-                    kasahareket.KASAID = KasaID;
-                    kasahareket.BELGENO = txtFaturaNo.Text;
-                    kasahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text); ;
-                    kasahareket.EVRAKTURU = "Alış İade Faturası";
-                    kasahareket.EVRAKID = fatura.ID;
-                    kasahareket.GCKODU = "C";
-                    kasahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
-                    kasahareket.CARIID = carihareket.CARIID;
-                    kasahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
-                    kasahareket.SAVEDATE = DateTime.Now;
-                    kasahareket.SAVEUSER = AnaForm.UserID;
-                    db.TBL_KASAHAREKETLERIs.InsertOnSubmit(kasahareket);
-                    db.SubmitChanges();
 
-                }
-                if (checkBox2.Checked)
-                {
-                    Fonksiyonlar.TBL_BANKAHAREKETLERI bankahareket = new Fonksiyonlar.TBL_BANKAHAREKETLERI();
-                    bankahareket.BANKAID = BankaID;
-                    bankahareket.CARIID = carihareket.CARIID;
-                    bankahareket.BELGENO = txtFaturaNo.Text;
-                    bankahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text);
-                    bankahareket.EVRAKTURU = "Satış Faturası";
-                    bankahareket.EVRAKID = fatura.ID;
-                    bankahareket.GCKODU = "C";
-                    bankahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
-                    bankahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
-                    bankahareket.SAVEDATE = DateTime.Now;
-                    bankahareket.SAVEUSER = AnaForm.UserID;
-                    db.TBL_BANKAHAREKETLERIs.InsertOnSubmit(bankahareket);
                     db.SubmitChanges();
                 }
-                temizle();
+                if (checkBox3.Checked)
+                {
+                    Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = new Fonksiyonlar.TBL_CARIHAREKETLERI();
+                    carihareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Alış İade Faturası";
+                    if (txtFaturaTuru.SelectedIndex == 0)
+                    {
+                        carihareket.ALACAK = 0;
+                        carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                    }
+                    else if (txtFaturaTuru.SelectedIndex == 1)
+                    {
+                        carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                        carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                    }
+                    carihareket.CARIID = CariID;
+                    carihareket.TARIH = DateTime.Now;
+                    carihareket.TIPI = "AIF";
+                    carihareket.EVRAKTURU = "Alış İade Faturası";
+                    carihareket.EVRAKID = fatura.ID;
+                    carihareket.SAVEDATE = DateTime.Now;
+                    carihareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_CARIHAREKETLERIs.InsertOnSubmit(carihareket);
+                    db.SubmitChanges();
+                    Mesajlar.yenikayit("Yeni Fatura Başarıyla Kayıt Edildi");
+                    if (checkBox1.Checked)
+                    {
+                        Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+                        kasahareket.KASAID = KasaID;
+                        kasahareket.BELGENO = txtFaturaNo.Text;
+                        kasahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text); ;
+                        kasahareket.EVRAKTURU = "Alış İade Faturası";
+                        kasahareket.EVRAKID = fatura.ID;
+                        kasahareket.GCKODU = "C";
+                        kasahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
+                        kasahareket.CARIID = carihareket.CARIID;
+                        kasahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
+                        kasahareket.SAVEDATE = DateTime.Now;
+                        kasahareket.SAVEUSER = AnaForm.UserID;
+                        db.TBL_KASAHAREKETLERIs.InsertOnSubmit(kasahareket);
+                        db.SubmitChanges();
+
+                    }
+                    if (checkBox2.Checked)
+                    {
+                        Fonksiyonlar.TBL_BANKAHAREKETLERI bankahareket = new Fonksiyonlar.TBL_BANKAHAREKETLERI();
+                        bankahareket.BANKAID = BankaID;
+                        bankahareket.CARIID = carihareket.CARIID;
+                        bankahareket.BELGENO = txtFaturaNo.Text;
+                        bankahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text);
+                        bankahareket.EVRAKTURU = "Satış Faturası";
+                        bankahareket.EVRAKID = fatura.ID;
+                        bankahareket.GCKODU = "C";
+                        bankahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
+                        bankahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
+                        bankahareket.SAVEDATE = DateTime.Now;
+                        bankahareket.SAVEUSER = AnaForm.UserID;
+                        db.TBL_BANKAHAREKETLERIs.InsertOnSubmit(bankahareket);
+                        db.SubmitChanges();
+                    }
+                    temizle();
+                }
             }
             catch (Exception ex)
             {
@@ -416,38 +505,167 @@ namespace DXApplication2.Modul_Fatura
                 fatura.CARIKODU = txtCariKodu.Text;
                 fatura.GENELTOPLAM = decimal.Parse(txtGenelToplam.Text);
                 fatura.ODEMEYERI = OdemeYeri;
-                fatura.ODEMEYERIID = OdemeID;
+                if (fatura.ODEMEYERI == "Kasa")
+                    fatura.ODEMEYERIID = Convert.ToInt32(label19.Text);
+                if (fatura.ODEMEYERI == "Banka")
+                    fatura.ODEMEYERIID = Convert.ToInt32(label20.Text);
+                if (checkBox1.Checked == true)
+                {
+                    fatura.KasaOk = "True";
+                    Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+                    kasahareket.KASAID = Convert.ToInt32(label19.Text);
+                    kasahareket.BELGENO = txtFaturaNo.Text;
+                    kasahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text);
+                    kasahareket.EVRAKTURU = "Alış İade Faturası";
+                    kasahareket.EVRAKID = fatura.ID;
+                    kasahareket.GCKODU = "C";
+                    kasahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
+                    kasahareket.CARIID = Convert.ToInt32(label18.Text);
+                    kasahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
+                    kasahareket.SAVEDATE = DateTime.Now;
+                    kasahareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_KASAHAREKETLERIs.InsertOnSubmit(kasahareket);
+
+                }
+                if (checkBox1.Checked == false)
+                {
+                    if (checkBox5.Checked == true)
+                    {
+                        silkasa();
+                        fatura.KasaOk = "false";
+                    }
+                    if (checkBox5.Checked == false)
+                    {
+                        fatura.KasaOk = "False";
+                    }
+                }
+                if (checkBox2.Checked == true)
+                {
+                    fatura.BankaOk = "True";
+                    Fonksiyonlar.TBL_BANKAHAREKETLERI bankahareket = new Fonksiyonlar.TBL_BANKAHAREKETLERI();
+                    bankahareket.BANKAID = BankaID;
+                    bankahareket.CARIID = Convert.ToInt32(label18.Text);
+                    bankahareket.BELGENO = txtFaturaNo.Text;
+                    bankahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text);
+                    bankahareket.EVRAKTURU = "Alış İade Faturası";
+                    bankahareket.EVRAKID = fatura.ID;
+                    bankahareket.GCKODU = "C";
+                    bankahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
+                    bankahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
+                    bankahareket.SAVEDATE = DateTime.Now;
+                    bankahareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_BANKAHAREKETLERIs.InsertOnSubmit(bankahareket);
+                    db.SubmitChanges();
+
+                }
+                if (checkBox2.Checked == false)
+                {
+                    if (checkBox6.Checked == true)
+                    {
+                        silbanka();
+                        fatura.BankaOk = "false";
+                    }
+                    if (checkBox6.Checked == false)
+                    {
+                        fatura.BankaOk = "false";
+                    }
+                }
+                if (checkBox3.Checked == true)
+                {
+                    fatura.CariOk = "True";
+                    db.SubmitChanges();
+                    Fonksiyonlar.TBL_CARIHAREKETLERI carihareket1 = new Fonksiyonlar.TBL_CARIHAREKETLERI();
+                    carihareket1.ACIKLAMA = txtFaturaNo.Text + "No ' lu Satış Faturası";
+                    if (txtFaturaTuru.SelectedIndex == 0)
+                    {
+                        carihareket1.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                        carihareket1.ALACAK = 0;
+                    }
+                    else if (txtFaturaTuru.SelectedIndex == 1)
+                    {
+                        carihareket1.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                        carihareket1.ALACAK = decimal.Parse(txtGenelToplam.Text);
+                    }
+                    carihareket1.CARIID = Convert.ToInt32(label18.Text);
+                    carihareket1.TARIH = DateTime.Now;
+                    carihareket1.TIPI = "AF";
+                    carihareket1.EVRAKTURU = "Alış İade Faturası";
+                    carihareket1.EVRAKID = fatura.ID;
+                    carihareket1.SAVEDATE = DateTime.Now;
+                    carihareket1.SAVEUSER = AnaForm.UserID;
+                    db.TBL_CARIHAREKETLERIs.InsertOnSubmit(carihareket1);
+                    db.SubmitChanges();
+
+                }
+                if (checkBox3.Checked == false)
+                {
+                    db.TBL_CARIHAREKETLERIs.DeleteOnSubmit(db.TBL_CARIHAREKETLERIs.First(s => s.EVRAKID == FaturaID));
+
+                    fatura.CariOk = "False";
+                }
+                if (checkBox4.Checked == true)
+                {
+                    fatura.StokOk = "True";
+                    db.SubmitChanges();
+                    db.TBL_STOKHAREKETLERIs.DeleteAllOnSubmit(db.TBL_STOKHAREKETLERIs.Where(s => s.FATURAID == FaturaID));
+                    db.SubmitChanges();
+                    Fonksiyonlar.TBL_STOKHAREKETLERI[] StokHareketi = new Fonksiyonlar.TBL_STOKHAREKETLERI[gridView1.RowCount];
+                    for (int i = 0; i < gridView1.RowCount; i++)
+                    {
+                        StokHareketi[i] = new Fonksiyonlar.TBL_STOKHAREKETLERI();
+                        StokHareketi[i].FATURAID = FaturaID;
+                        StokHareketi[i].BIRIMFIYAT = decimal.Parse(gridView1.GetRowCellValue(i, "BIRIMFIYAT").ToString());
+                        StokHareketi[i].GCKODU = "C";
+                        StokHareketi[i].IRSALIYEID = IrsaliyeID;
+                        StokHareketi[i].KDV = decimal.Parse(gridView1.GetRowCellValue(i, "KDV").ToString());
+                        StokHareketi[i].MIKTAR = int.Parse(gridView1.GetRowCellValue(i, "MIKTAR").ToString());
+                        StokHareketi[i].STOKKODU = gridView1.GetRowCellValue(i, "STOKKODU").ToString();
+                        StokHareketi[i].TIPI = "Alış İade Faturası";
+                        StokHareketi[i].SAVEDATE = DateTime.Now;
+                        StokHareketi[i].SAVEUSER = AnaForm.UserID;
+                        db.TBL_STOKHAREKETLERIs.InsertOnSubmit(StokHareketi[i]);
+
+                    }
+
+                }
+                if (checkBox4.Checked == false)
+                {
+                    fatura.StokOk = "False";
+                    db.TBL_STOKHAREKETLERIs.DeleteAllOnSubmit(db.TBL_STOKHAREKETLERIs.Where(s => s.FATURAID == FaturaID));
+                    db.SubmitChanges();
+                    Fonksiyonlar.TBL_STOKHAREKETLERI[] StokHareketi = new Fonksiyonlar.TBL_STOKHAREKETLERI[gridView1.RowCount];
+                    for (int i = 0; i < gridView1.RowCount; i++)
+                    {
+                        StokHareketi[i] = new Fonksiyonlar.TBL_STOKHAREKETLERI();
+                        StokHareketi[i].FATURAID = FaturaID;
+                        StokHareketi[i].BIRIMFIYAT = decimal.Parse(gridView1.GetRowCellValue(i, "BIRIMFIYAT").ToString());
+                        StokHareketi[i].GCKODU = "";
+                        StokHareketi[i].IRSALIYEID = IrsaliyeID;
+                        StokHareketi[i].KDV = decimal.Parse(gridView1.GetRowCellValue(i, "KDV").ToString());
+                        StokHareketi[i].MIKTAR = int.Parse(gridView1.GetRowCellValue(i, "MIKTAR").ToString());
+                        StokHareketi[i].STOKKODU = gridView1.GetRowCellValue(i, "STOKKODU").ToString();
+                        StokHareketi[i].TIPI = "Alış İade Faturası";
+                        StokHareketi[i].SAVEDATE = DateTime.Now;
+                        StokHareketi[i].SAVEUSER = AnaForm.UserID;
+                        db.TBL_STOKHAREKETLERIs.InsertOnSubmit(StokHareketi[i]);
+
+                    }
+                }
+
                 fatura.EDITDATE = DateTime.Now;
                 fatura.EDITUSER = AnaForm.UserID;
                 db.SubmitChanges();
+
                 Fonksiyonlar.TBL_IRSALIYELER irsaliye = db.TBL_IRSALIYELERs.First(s => s.ID == IrsaliyeID);
                 irsaliye.IRSALIYENO = txtİrsaliyeNo.Text;
                 irsaliye.TARIHI = DateTime.Parse(txtIrsaliyeTarih.Text);
                 irsaliye.EDITDATE = DateTime.Now;
                 irsaliye.EDITUSER = AnaForm.UserID;
-                db.TBL_STOKHAREKETLERIs.DeleteAllOnSubmit(db.TBL_STOKHAREKETLERIs.Where(s => s.FATURAID == FaturaID));
-                db.SubmitChanges();
-                Fonksiyonlar.TBL_STOKHAREKETLERI[] StokHareketi = new Fonksiyonlar.TBL_STOKHAREKETLERI[gridView1.RowCount];
-                for (int i =0; i < gridView1.RowCount; i++)
-                {
-                    StokHareketi[i] = new Fonksiyonlar.TBL_STOKHAREKETLERI();
-                    StokHareketi[i].FATURAID = FaturaID;
-                    StokHareketi[i].BIRIMFIYAT = decimal.Parse(gridView1.GetRowCellValue(i, "BIRIMFIYAT").ToString());
-                    StokHareketi[i].GCKODU = "C";
-                    StokHareketi[i].IRSALIYEID = IrsaliyeID;
-                    StokHareketi[i].KDV = decimal.Parse(gridView1.GetRowCellValue(i, "KDV").ToString());
-                    StokHareketi[i].MIKTAR = int.Parse(gridView1.GetRowCellValue(i, "MIKTAR").ToString());
-                    StokHareketi[i].STOKKODU = gridView1.GetRowCellValue(i, "STOKKODU").ToString();
-                    StokHareketi[i].TIPI = "Alış İade Faturası";
-                    StokHareketi[i].SAVEDATE = DateTime.Now;
-                    StokHareketi[i].SAVEUSER = AnaForm.UserID;
-                    db.TBL_STOKHAREKETLERIs.InsertOnSubmit(StokHareketi[i]);
 
-                }
 
                 db.SubmitChanges();
-                Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = db.TBL_CARIHAREKETLERIs.First(s => s.EVRAKTURU == "Alış İade Faturası" && s.EVRAKID == FaturaID);
-                if (txtFaturaTuru.SelectedIndex ==0)
+                Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = db.TBL_CARIHAREKETLERIs.First(s => s.EVRAKTURU == "Satış Faturası" && s.EVRAKID == FaturaID);
+                if (txtFaturaTuru.SelectedIndex == 0)
                 {
                     carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
                     carihareket.ALACAK = 0;
@@ -461,15 +679,15 @@ namespace DXApplication2.Modul_Fatura
                 carihareket.EDITUSER = AnaForm.UserID;
                 db.SubmitChanges();
                 Mesajlar.Guncelle(true);
-                temizle();
+
             }
+
             catch (Exception ex)
             {
                 Mesajlar.Hata(ex);
             }
         }
 
-       
         public DataTable LINQToDataTable<T>(IEnumerable<T> Lnqlst)
         {
             DataTable dt = new DataTable();
@@ -613,6 +831,7 @@ namespace DXApplication2.Modul_Fatura
                 BankaID = ID;
                 txtHesapAdi.Text = db.TBL_BANKALARs.First(s => s.ID == BankaID).HESAPADI;
                 txtHesapNo.Text = db.TBL_BANKALARs.First(s => s.ID == BankaID).HESAPNO;
+                label20.Text = db.TBL_BANKALARs.First(s => s.ID == BankaID).ID.ToString();
             }
             catch (Exception)
             {
@@ -628,6 +847,7 @@ namespace DXApplication2.Modul_Fatura
                 KasaID = ID;
                 txtKasaAdi.Text = db.TBL_KASALARs.First(s => s.ID == KasaID).KASAADI;
                 txtKasaKodu.Text = db.TBL_KASALARs.First(s => s.ID == KasaID).KASAKODU;
+                label19.Text = db.TBL_KASALARs.First(s => s.ID == KasaID).ID.ToString();
             }
             catch (Exception)
             {
@@ -650,6 +870,18 @@ namespace DXApplication2.Modul_Fatura
                 KasaAc(Id);
                 AnaForm.aktarma = -1;
             }
+        }
+        void silkasa()
+        {
+            db.TBL_KASAHAREKETLERIs.DeleteOnSubmit(db.TBL_KASAHAREKETLERIs.FirstOrDefault(s => s.EVRAKID == FaturaID));
+
+        }
+
+        void silbanka()
+        {
+
+            db.TBL_BANKAHAREKETLERIs.DeleteOnSubmit(db.TBL_BANKAHAREKETLERIs.FirstOrDefault(s => s.EVRAKID == FaturaID));
+
         }
     }
 }

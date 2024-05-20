@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlisIade));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnkapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnkaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -92,7 +91,15 @@
             this.colBIRIMFIYAT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTOPLAM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -137,6 +144,13 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.checkBox6);
+            this.groupControl1.Controls.Add(this.checkBox5);
+            this.groupControl1.Controls.Add(this.label20);
+            this.groupControl1.Controls.Add(this.label19);
+            this.groupControl1.Controls.Add(this.label18);
+            this.groupControl1.Controls.Add(this.checkBox4);
+            this.groupControl1.Controls.Add(this.checkBox3);
             this.groupControl1.Controls.Add(this.checkBox2);
             this.groupControl1.Controls.Add(this.checkBox1);
             this.groupControl1.Controls.Add(this.simpleButton1);
@@ -152,17 +166,6 @@
             this.groupControl1.Size = new System.Drawing.Size(1014, 146);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Fatura Bilgileri";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(691, 30);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Kasa Hareketi İşle";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // simpleButton1
             // 
@@ -758,6 +761,84 @@
             this.colTOPLAM.Visible = true;
             this.colTOPLAM.VisibleIndex = 7;
             // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Enabled = false;
+            this.checkBox6.Location = new System.Drawing.Point(642, 91);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(71, 17);
+            this.checkBox6.TabIndex = 20;
+            this.checkBox6.Text = "bankavar";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.Visible = false;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Enabled = false;
+            this.checkBox5.Location = new System.Drawing.Point(642, 114);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(64, 17);
+            this.checkBox5.TabIndex = 21;
+            this.checkBox5.Text = "kasavar";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.Visible = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(794, 77);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 13);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "label20";
+            this.label20.Visible = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(747, 77);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 13);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "label19";
+            this.label19.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(691, 77);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "label18";
+            this.label18.Visible = false;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(860, 52);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(110, 17);
+            this.checkBox4.TabIndex = 15;
+            this.checkBox4.Text = "Stok Hareketi İşle";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(860, 29);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(108, 17);
+            this.checkBox3.TabIndex = 16;
+            this.checkBox3.Text = "Cari Hareketi İşle";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -765,9 +846,20 @@
             this.checkBox2.Location = new System.Drawing.Point(691, 53);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(118, 17);
-            this.checkBox2.TabIndex = 7;
+            this.checkBox2.TabIndex = 14;
             this.checkBox2.Text = "Banka Hareketi İşle";
             this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Enabled = false;
+            this.checkBox1.Location = new System.Drawing.Point(691, 30);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(112, 17);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Kasa Hareketi İşle";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // frmAlisIade
             // 
@@ -897,7 +989,14 @@
         private DevExpress.XtraEditors.SimpleButton btnsil;
         private System.Windows.Forms.ContextMenuStrip satirsil;
         private System.Windows.Forms.ToolStripMenuItem satırSilToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
