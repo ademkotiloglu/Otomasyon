@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetler" targetNamespace="http://tempuri.org/DataSetler.xsd" xmlns:mstns="http://tempuri.org/DataSetler.xsd" xmlns="http://tempuri.org/DataSetler.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OtomasyonConnectionString2" IsAppSettingsProperty="true" Modifier="Assembly" Name="OtomasyonConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DXApplication2.Properties.Settings.GlobalReference.Default.OtomasyonConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OtomasyonConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OtomasyonConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DXApplication2.Properties.Settings.GlobalReference.Default.OtomasyonConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_FATURALARTableAdapter" GeneratorDataComponentClassName="VW_FATURALARTableAdapter" Name="VW_FATURALAR" UserDataComponentName="VW_FATURALARTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OtomasyonConnectionString2 (Settings)" DbObjectName="Otomasyon.dbo.VW_FATURALAR" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CARIKODU, CARIADI, VERGIDAIRESI, VERGINO, SEHIR, ILCE, ADRES, FATURANO, TARIHI, ACIKLAMA, GENELTOPLAM, STOKKODU, STOKADI, STOKBIRIM, BIRIMFIYAT, KDV, STOKBARKOD, MIKTAR, TOPLAM
+FROM            VW_FATURALAR</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CARIKODU" DataSetColumn="CARIKODU" />
+              <Mapping SourceColumn="CARIADI" DataSetColumn="CARIADI" />
+              <Mapping SourceColumn="VERGIDAIRESI" DataSetColumn="VERGIDAIRESI" />
+              <Mapping SourceColumn="VERGINO" DataSetColumn="VERGINO" />
+              <Mapping SourceColumn="SEHIR" DataSetColumn="SEHIR" />
+              <Mapping SourceColumn="ILCE" DataSetColumn="ILCE" />
+              <Mapping SourceColumn="ADRES" DataSetColumn="ADRES" />
+              <Mapping SourceColumn="FATURANO" DataSetColumn="FATURANO" />
+              <Mapping SourceColumn="TARIHI" DataSetColumn="TARIHI" />
+              <Mapping SourceColumn="ACIKLAMA" DataSetColumn="ACIKLAMA" />
+              <Mapping SourceColumn="GENELTOPLAM" DataSetColumn="GENELTOPLAM" />
+              <Mapping SourceColumn="STOKKODU" DataSetColumn="STOKKODU" />
+              <Mapping SourceColumn="STOKADI" DataSetColumn="STOKADI" />
+              <Mapping SourceColumn="STOKBIRIM" DataSetColumn="STOKBIRIM" />
+              <Mapping SourceColumn="BIRIMFIYAT" DataSetColumn="BIRIMFIYAT" />
+              <Mapping SourceColumn="KDV" DataSetColumn="KDV" />
+              <Mapping SourceColumn="STOKBARKOD" DataSetColumn="STOKBARKOD" />
+              <Mapping SourceColumn="MIKTAR" DataSetColumn="MIKTAR" />
+              <Mapping SourceColumn="TOPLAM" DataSetColumn="TOPLAM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_IRSALIYELERTableAdapter" GeneratorDataComponentClassName="VW_IRSALIYELERTableAdapter" Name="VW_IRSALIYELER" UserDataComponentName="VW_IRSALIYELERTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OtomasyonConnectionString2 (Settings)" DbObjectName="Otomasyon.dbo.VW_IRSALIYELER" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        VW_IRSALIYELER.*
+FROM            VW_IRSALIYELER</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CARIADI" DataSetColumn="CARIADI" />
+              <Mapping SourceColumn="VERGIDAIRESI" DataSetColumn="VERGIDAIRESI" />
+              <Mapping SourceColumn="VERGINO" DataSetColumn="VERGINO" />
+              <Mapping SourceColumn="SEHIR" DataSetColumn="SEHIR" />
+              <Mapping SourceColumn="ILCE" DataSetColumn="ILCE" />
+              <Mapping SourceColumn="ADRES" DataSetColumn="ADRES" />
+              <Mapping SourceColumn="IRSALIYENO" DataSetColumn="IRSALIYENO" />
+              <Mapping SourceColumn="CARIKODU" DataSetColumn="CARIKODU" />
+              <Mapping SourceColumn="TARIHI" DataSetColumn="TARIHI" />
+              <Mapping SourceColumn="ACIKLAMA" DataSetColumn="ACIKLAMA" />
+              <Mapping SourceColumn="STOKKODU" DataSetColumn="STOKKODU" />
+              <Mapping SourceColumn="STOKADI" DataSetColumn="STOKADI" />
+              <Mapping SourceColumn="STOKBARKOD" DataSetColumn="STOKBARKOD" />
+              <Mapping SourceColumn="STOKBIRIM" DataSetColumn="STOKBIRIM" />
+              <Mapping SourceColumn="BIRIMFIYAT" DataSetColumn="BIRIMFIYAT" />
+              <Mapping SourceColumn="KDV" DataSetColumn="KDV" />
+              <Mapping SourceColumn="MIKTAR" DataSetColumn="MIKTAR" />
+              <Mapping SourceColumn="TOPLAM" DataSetColumn="TOPLAM" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBL_STOKLARTableAdapter" GeneratorDataComponentClassName="TBL_STOKLARTableAdapter" Name="TBL_STOKLAR" UserDataComponentName="TBL_STOKLARTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OtomasyonConnectionString (Settings)" DbObjectName="Otomasyon.dbo.TBL_STOKLAR" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [TBL_STOKLAR] WHERE (([STOKBARKOD] = @Original_STOKBARKOD) AND ((@IsNull_STOKKODU = 1 AND [STOKKODU] IS NULL) OR ([STOKKODU] = @Original_STOKKODU)) AND ((@IsNull_STOKADI = 1 AND [STOKADI] IS NULL) OR ([STOKADI] = @Original_STOKADI)) AND ((@IsNull_STOKBIRIM = 1 AND [STOKBIRIM] IS NULL) OR ([STOKBIRIM] = @Original_STOKBIRIM)) AND ((@IsNull_STOKALISFIYAT = 1 AND [STOKALISFIYAT] IS NULL) OR ([STOKALISFIYAT] = @Original_STOKALISFIYAT)) AND ((@IsNull_STOKSATISFIYAT = 1 AND [STOKSATISFIYAT] IS NULL) OR ([STOKSATISFIYAT] = @Original_STOKSATISFIYAT)) AND ((@IsNull_STOKALISKDV = 1 AND [STOKALISKDV] IS NULL) OR ([STOKALISKDV] = @Original_STOKALISKDV)) AND ((@IsNull_STOKSATISKDV = 1 AND [STOKSATISKDV] IS NULL) OR ([STOKSATISKDV] = @Original_STOKSATISKDV)) AND ((@IsNull_STOKGRUPID = 1 AND [STOKGRUPID] IS NULL) OR ([STOKGRUPID] = @Original_STOKGRUPID)) AND ((@IsNull_STOKSAVEUSER = 1 AND [STOKSAVEUSER] IS NULL) OR ([STOKSAVEUSER] = @Original_STOKSAVEUSER)) AND ((@IsNull_STOKSAVEDATE = 1 AND [STOKSAVEDATE] IS NULL) OR ([STOKSAVEDATE] = @Original_STOKSAVEDATE)) AND ((@IsNull_STOKEDITUSER = 1 AND [STOKEDITUSER] IS NULL) OR ([STOKEDITUSER] = @Original_STOKEDITUSER)) AND ((@IsNull_STOKEDITTIME = 1 AND [STOKEDITTIME] IS NULL) OR ([STOKEDITTIME] = @Original_STOKEDITTIME)) AND ([ID] = @Original_ID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKBARKOD" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBARKOD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKKODU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKKODU" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKADI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKADI" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKBIRIM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKBIRIM" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKALISFIYAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKALISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSATISFIYAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKSATISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKALISKDV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKALISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSATISKDV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKSATISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSAVEDATE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_STOKSAVEDATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKEDITTIME" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_STOKEDITTIME" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [TBL_STOKLAR] ([STOKBARKOD], [STOKKODU], [STOKADI], [STOKBIRIM], [STOKALISFIYAT], [STOKSATISFIYAT], [STOKALISKDV], [STOKSATISKDV], [STOKGRUPID], [STOKRESIM], [STOKSAVEUSER], [STOKSAVEDATE], [STOKEDITUSER], [STOKEDITTIME]) VALUES (@STOKBARKOD, @STOKKODU, @STOKADI, @STOKBIRIM, @STOKALISFIYAT, @STOKSATISFIYAT, @STOKALISKDV, @STOKSATISKDV, @STOKGRUPID, @STOKRESIM, @STOKSAVEUSER, @STOKSAVEDATE, @STOKEDITUSER, @STOKEDITTIME);
+SELECT STOKBARKOD, STOKKODU, STOKADI, STOKBIRIM, STOKALISFIYAT, STOKSATISFIYAT, STOKALISKDV, STOKSATISKDV, STOKGRUPID, STOKRESIM, STOKSAVEUSER, STOKSAVEDATE, STOKEDITUSER, STOKEDITTIME, ID FROM TBL_STOKLAR WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKBARKOD" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBARKOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKKODU" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKADI" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKBIRIM" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKALISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKSATISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKALISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKSATISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@STOKRESIM" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="STOKRESIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@STOKSAVEDATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@STOKEDITTIME" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBL_STOKLAR.*
+FROM            TBL_STOKLAR</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [TBL_STOKLAR] SET [STOKBARKOD] = @STOKBARKOD, [STOKKODU] = @STOKKODU, [STOKADI] = @STOKADI, [STOKBIRIM] = @STOKBIRIM, [STOKALISFIYAT] = @STOKALISFIYAT, [STOKSATISFIYAT] = @STOKSATISFIYAT, [STOKALISKDV] = @STOKALISKDV, [STOKSATISKDV] = @STOKSATISKDV, [STOKGRUPID] = @STOKGRUPID, [STOKRESIM] = @STOKRESIM, [STOKSAVEUSER] = @STOKSAVEUSER, [STOKSAVEDATE] = @STOKSAVEDATE, [STOKEDITUSER] = @STOKEDITUSER, [STOKEDITTIME] = @STOKEDITTIME WHERE (([STOKBARKOD] = @Original_STOKBARKOD) AND ((@IsNull_STOKKODU = 1 AND [STOKKODU] IS NULL) OR ([STOKKODU] = @Original_STOKKODU)) AND ((@IsNull_STOKADI = 1 AND [STOKADI] IS NULL) OR ([STOKADI] = @Original_STOKADI)) AND ((@IsNull_STOKBIRIM = 1 AND [STOKBIRIM] IS NULL) OR ([STOKBIRIM] = @Original_STOKBIRIM)) AND ((@IsNull_STOKALISFIYAT = 1 AND [STOKALISFIYAT] IS NULL) OR ([STOKALISFIYAT] = @Original_STOKALISFIYAT)) AND ((@IsNull_STOKSATISFIYAT = 1 AND [STOKSATISFIYAT] IS NULL) OR ([STOKSATISFIYAT] = @Original_STOKSATISFIYAT)) AND ((@IsNull_STOKALISKDV = 1 AND [STOKALISKDV] IS NULL) OR ([STOKALISKDV] = @Original_STOKALISKDV)) AND ((@IsNull_STOKSATISKDV = 1 AND [STOKSATISKDV] IS NULL) OR ([STOKSATISKDV] = @Original_STOKSATISKDV)) AND ((@IsNull_STOKGRUPID = 1 AND [STOKGRUPID] IS NULL) OR ([STOKGRUPID] = @Original_STOKGRUPID)) AND ((@IsNull_STOKSAVEUSER = 1 AND [STOKSAVEUSER] IS NULL) OR ([STOKSAVEUSER] = @Original_STOKSAVEUSER)) AND ((@IsNull_STOKSAVEDATE = 1 AND [STOKSAVEDATE] IS NULL) OR ([STOKSAVEDATE] = @Original_STOKSAVEDATE)) AND ((@IsNull_STOKEDITUSER = 1 AND [STOKEDITUSER] IS NULL) OR ([STOKEDITUSER] = @Original_STOKEDITUSER)) AND ((@IsNull_STOKEDITTIME = 1 AND [STOKEDITTIME] IS NULL) OR ([STOKEDITTIME] = @Original_STOKEDITTIME)) AND ([ID] = @Original_ID));
+SELECT STOKBARKOD, STOKKODU, STOKADI, STOKBIRIM, STOKALISFIYAT, STOKSATISFIYAT, STOKALISKDV, STOKSATISKDV, STOKGRUPID, STOKRESIM, STOKSAVEUSER, STOKSAVEDATE, STOKEDITUSER, STOKEDITTIME, ID FROM TBL_STOKLAR WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKBARKOD" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBARKOD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKKODU" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKADI" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@STOKBIRIM" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKALISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKSATISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKALISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@STOKSATISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@STOKRESIM" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="STOKRESIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@STOKSAVEDATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@STOKEDITTIME" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKBARKOD" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBARKOD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKKODU" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKKODU" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKKODU" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKADI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKADI" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKADI" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKBIRIM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_STOKBIRIM" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="STOKBIRIM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKALISFIYAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKALISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISFIYAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSATISFIYAT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKSATISFIYAT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISFIYAT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKALISKDV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKALISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKALISKDV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSATISKDV" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_STOKSATISKDV" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="STOKSATISKDV" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKGRUPID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKGRUPID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKSAVEUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEUSER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKSAVEDATE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_STOKSAVEDATE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKSAVEDATE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_STOKEDITUSER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITUSER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_STOKEDITTIME" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_STOKEDITTIME" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="STOKEDITTIME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Otomasyon.dbo.TBL_STOKLAR" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="STOKBARKOD" DataSetColumn="STOKBARKOD" />
+              <Mapping SourceColumn="STOKKODU" DataSetColumn="STOKKODU" />
+              <Mapping SourceColumn="STOKADI" DataSetColumn="STOKADI" />
+              <Mapping SourceColumn="STOKBIRIM" DataSetColumn="STOKBIRIM" />
+              <Mapping SourceColumn="STOKALISFIYAT" DataSetColumn="STOKALISFIYAT" />
+              <Mapping SourceColumn="STOKSATISFIYAT" DataSetColumn="STOKSATISFIYAT" />
+              <Mapping SourceColumn="STOKALISKDV" DataSetColumn="STOKALISKDV" />
+              <Mapping SourceColumn="STOKSATISKDV" DataSetColumn="STOKSATISKDV" />
+              <Mapping SourceColumn="STOKGRUPID" DataSetColumn="STOKGRUPID" />
+              <Mapping SourceColumn="STOKRESIM" DataSetColumn="STOKRESIM" />
+              <Mapping SourceColumn="STOKSAVEUSER" DataSetColumn="STOKSAVEUSER" />
+              <Mapping SourceColumn="STOKSAVEDATE" DataSetColumn="STOKSAVEDATE" />
+              <Mapping SourceColumn="STOKEDITUSER" DataSetColumn="STOKEDITUSER" />
+              <Mapping SourceColumn="STOKEDITTIME" DataSetColumn="STOKEDITTIME" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetler" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetler" msprop:Generator_DataSetName="DataSetler">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SatisFaturasi" msprop:Generator_RowClassName="SatisFaturasiRow" msprop:Generator_RowEvHandlerName="SatisFaturasiRowChangeEventHandler" msprop:Generator_RowDeletedName="SatisFaturasiRowDeleted" msprop:Generator_RowDeletingName="SatisFaturasiRowDeleting" msprop:Generator_RowEvArgName="SatisFaturasiRowChangeEvent" msprop:Generator_TablePropName="SatisFaturasi" msprop:Generator_RowChangedName="SatisFaturasiRowChanged" msprop:Generator_RowChangingName="SatisFaturasiRowChanging" msprop:Generator_TableClassName="SatisFaturasiDataTable" msprop:Generator_UserTableName="SatisFaturasi" msprop:Generator_TableVarName="tableSatisFaturasi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BARKOD" msprop:Generator_ColumnPropNameInRow="BARKOD" msprop:Generator_ColumnPropNameInTable="BARKODColumn" msprop:Generator_ColumnVarNameInTable="columnBARKOD" msprop:Generator_UserColumnName="BARKOD" type="xs:string" minOccurs="0" />
+              <xs:element name="STOKKODU" msprop:Generator_ColumnPropNameInRow="STOKKODU" msprop:Generator_ColumnPropNameInTable="STOKKODUColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKKODU" msprop:Generator_UserColumnName="STOKKODU" type="xs:string" minOccurs="0" />
+              <xs:element name="STOKADI" msprop:Generator_ColumnPropNameInRow="STOKADI" msprop:Generator_ColumnPropNameInTable="STOKADIColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKADI" msprop:Generator_UserColumnName="STOKADI" type="xs:string" minOccurs="0" />
+              <xs:element name="BIRIM" msprop:Generator_ColumnPropNameInRow="BIRIM" msprop:Generator_ColumnPropNameInTable="BIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIM" msprop:Generator_UserColumnName="BIRIM" type="xs:string" minOccurs="0" />
+              <xs:element name="MIKTAR" msprop:Generator_ColumnPropNameInRow="MIKTAR" msprop:Generator_ColumnPropNameInTable="MIKTARColumn" msprop:Generator_ColumnVarNameInTable="columnMIKTAR" msprop:Generator_UserColumnName="MIKTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIRIMFIYAT" msprop:Generator_ColumnPropNameInRow="BIRIMFIYAT" msprop:Generator_ColumnPropNameInTable="BIRIMFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIMFIYAT" msprop:Generator_UserColumnName="BIRIMFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV" msprop:Generator_ColumnPropNameInRow="KDV" msprop:Generator_ColumnPropNameInTable="KDVColumn" msprop:Generator_ColumnVarNameInTable="columnKDV" msprop:Generator_UserColumnName="KDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAM" msprop:Generator_ColumnPropNameInRow="TOPLAM" msprop:Generator_ColumnPropNameInTable="TOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnTOPLAM" msprop:Generator_UserColumnName="TOPLAM" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_FATURALAR" msprop:Generator_RowEvHandlerName="VW_FATURALARRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_FATURALARRowDeleted" msprop:Generator_RowDeletingName="VW_FATURALARRowDeleting" msprop:Generator_RowEvArgName="VW_FATURALARRowChangeEvent" msprop:Generator_TablePropName="VW_FATURALAR" msprop:Generator_RowChangedName="VW_FATURALARRowChanged" msprop:Generator_RowChangingName="VW_FATURALARRowChanging" msprop:Generator_TableClassName="VW_FATURALARDataTable" msprop:Generator_RowClassName="VW_FATURALARRow" msprop:Generator_TableVarName="tableVW_FATURALAR" msprop:Generator_UserTableName="VW_FATURALAR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CARIKODU" msprop:Generator_ColumnPropNameInRow="CARIKODU" msprop:Generator_ColumnPropNameInTable="CARIKODUColumn" msprop:Generator_ColumnVarNameInTable="columnCARIKODU" msprop:Generator_UserColumnName="CARIKODU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARIADI" msprop:Generator_ColumnPropNameInRow="CARIADI" msprop:Generator_ColumnPropNameInTable="CARIADIColumn" msprop:Generator_ColumnVarNameInTable="columnCARIADI" msprop:Generator_UserColumnName="CARIADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VERGIDAIRESI" msprop:Generator_ColumnPropNameInRow="VERGIDAIRESI" msprop:Generator_ColumnPropNameInTable="VERGIDAIRESIColumn" msprop:Generator_ColumnVarNameInTable="columnVERGIDAIRESI" msprop:Generator_UserColumnName="VERGIDAIRESI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VERGINO" msprop:Generator_ColumnPropNameInRow="VERGINO" msprop:Generator_ColumnPropNameInTable="VERGINOColumn" msprop:Generator_ColumnVarNameInTable="columnVERGINO" msprop:Generator_UserColumnName="VERGINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SEHIR" msprop:Generator_ColumnPropNameInRow="SEHIR" msprop:Generator_ColumnPropNameInTable="SEHIRColumn" msprop:Generator_ColumnVarNameInTable="columnSEHIR" msprop:Generator_UserColumnName="SEHIR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ILCE" msprop:Generator_ColumnPropNameInRow="ILCE" msprop:Generator_ColumnPropNameInTable="ILCEColumn" msprop:Generator_ColumnVarNameInTable="columnILCE" msprop:Generator_UserColumnName="ILCE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADRES" msprop:Generator_ColumnPropNameInRow="ADRES" msprop:Generator_ColumnPropNameInTable="ADRESColumn" msprop:Generator_ColumnVarNameInTable="columnADRES" msprop:Generator_UserColumnName="ADRES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FATURANO" msprop:Generator_ColumnPropNameInRow="FATURANO" msprop:Generator_ColumnPropNameInTable="FATURANOColumn" msprop:Generator_ColumnVarNameInTable="columnFATURANO" msprop:Generator_UserColumnName="FATURANO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TARIHI" msprop:Generator_ColumnPropNameInRow="TARIHI" msprop:Generator_ColumnPropNameInTable="TARIHIColumn" msprop:Generator_ColumnVarNameInTable="columnTARIHI" msprop:Generator_UserColumnName="TARIHI" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACIKLAMA" msprop:Generator_ColumnPropNameInRow="ACIKLAMA" msprop:Generator_ColumnPropNameInTable="ACIKLAMAColumn" msprop:Generator_ColumnVarNameInTable="columnACIKLAMA" msprop:Generator_UserColumnName="ACIKLAMA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENELTOPLAM" msprop:Generator_ColumnPropNameInRow="GENELTOPLAM" msprop:Generator_ColumnPropNameInTable="GENELTOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnGENELTOPLAM" msprop:Generator_UserColumnName="GENELTOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKKODU" msprop:Generator_ColumnPropNameInRow="STOKKODU" msprop:Generator_ColumnPropNameInTable="STOKKODUColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKKODU" msprop:Generator_UserColumnName="STOKKODU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKADI" msprop:Generator_ColumnPropNameInRow="STOKADI" msprop:Generator_ColumnPropNameInTable="STOKADIColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKADI" msprop:Generator_UserColumnName="STOKADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKBIRIM" msprop:Generator_ColumnPropNameInRow="STOKBIRIM" msprop:Generator_ColumnPropNameInTable="STOKBIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBIRIM" msprop:Generator_UserColumnName="STOKBIRIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BIRIMFIYAT" msprop:Generator_ColumnPropNameInRow="BIRIMFIYAT" msprop:Generator_ColumnPropNameInTable="BIRIMFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIMFIYAT" msprop:Generator_UserColumnName="BIRIMFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV" msprop:Generator_ColumnPropNameInRow="KDV" msprop:Generator_ColumnPropNameInTable="KDVColumn" msprop:Generator_ColumnVarNameInTable="columnKDV" msprop:Generator_UserColumnName="KDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKBARKOD" msprop:Generator_ColumnPropNameInRow="STOKBARKOD" msprop:Generator_ColumnPropNameInTable="STOKBARKODColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBARKOD" msprop:Generator_UserColumnName="STOKBARKOD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MIKTAR" msprop:Generator_ColumnPropNameInRow="MIKTAR" msprop:Generator_ColumnPropNameInTable="MIKTARColumn" msprop:Generator_ColumnVarNameInTable="columnMIKTAR" msprop:Generator_UserColumnName="MIKTAR" type="xs:int" minOccurs="0" />
+              <xs:element name="TOPLAM" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TOPLAM" msprop:Generator_ColumnPropNameInTable="TOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnTOPLAM" msprop:Generator_UserColumnName="TOPLAM" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_IRSALIYELER" msprop:Generator_RowClassName="VW_IRSALIYELERRow" msprop:Generator_RowEvHandlerName="VW_IRSALIYELERRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_IRSALIYELERRowDeleted" msprop:Generator_RowDeletingName="VW_IRSALIYELERRowDeleting" msprop:Generator_RowEvArgName="VW_IRSALIYELERRowChangeEvent" msprop:Generator_TablePropName="VW_IRSALIYELER" msprop:Generator_RowChangedName="VW_IRSALIYELERRowChanged" msprop:Generator_RowChangingName="VW_IRSALIYELERRowChanging" msprop:Generator_TableClassName="VW_IRSALIYELERDataTable" msprop:Generator_UserTableName="VW_IRSALIYELER" msprop:Generator_TableVarName="tableVW_IRSALIYELER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CARIADI" msprop:Generator_ColumnPropNameInRow="CARIADI" msprop:Generator_ColumnPropNameInTable="CARIADIColumn" msprop:Generator_ColumnVarNameInTable="columnCARIADI" msprop:Generator_UserColumnName="CARIADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VERGIDAIRESI" msprop:Generator_ColumnPropNameInRow="VERGIDAIRESI" msprop:Generator_ColumnPropNameInTable="VERGIDAIRESIColumn" msprop:Generator_ColumnVarNameInTable="columnVERGIDAIRESI" msprop:Generator_UserColumnName="VERGIDAIRESI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VERGINO" msprop:Generator_ColumnPropNameInRow="VERGINO" msprop:Generator_ColumnPropNameInTable="VERGINOColumn" msprop:Generator_ColumnVarNameInTable="columnVERGINO" msprop:Generator_UserColumnName="VERGINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SEHIR" msprop:Generator_ColumnPropNameInRow="SEHIR" msprop:Generator_ColumnPropNameInTable="SEHIRColumn" msprop:Generator_ColumnVarNameInTable="columnSEHIR" msprop:Generator_UserColumnName="SEHIR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ILCE" msprop:Generator_ColumnPropNameInRow="ILCE" msprop:Generator_ColumnPropNameInTable="ILCEColumn" msprop:Generator_ColumnVarNameInTable="columnILCE" msprop:Generator_UserColumnName="ILCE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ADRES" msprop:Generator_ColumnPropNameInRow="ADRES" msprop:Generator_ColumnPropNameInTable="ADRESColumn" msprop:Generator_ColumnVarNameInTable="columnADRES" msprop:Generator_UserColumnName="ADRES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IRSALIYENO" msprop:Generator_ColumnPropNameInRow="IRSALIYENO" msprop:Generator_ColumnPropNameInTable="IRSALIYENOColumn" msprop:Generator_ColumnVarNameInTable="columnIRSALIYENO" msprop:Generator_UserColumnName="IRSALIYENO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CARIKODU" msprop:Generator_ColumnPropNameInRow="CARIKODU" msprop:Generator_ColumnPropNameInTable="CARIKODUColumn" msprop:Generator_ColumnVarNameInTable="columnCARIKODU" msprop:Generator_UserColumnName="CARIKODU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TARIHI" msprop:Generator_ColumnPropNameInRow="TARIHI" msprop:Generator_ColumnPropNameInTable="TARIHIColumn" msprop:Generator_ColumnVarNameInTable="columnTARIHI" msprop:Generator_UserColumnName="TARIHI" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACIKLAMA" msprop:Generator_ColumnPropNameInRow="ACIKLAMA" msprop:Generator_ColumnPropNameInTable="ACIKLAMAColumn" msprop:Generator_ColumnVarNameInTable="columnACIKLAMA" msprop:Generator_UserColumnName="ACIKLAMA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKKODU" msprop:Generator_ColumnPropNameInRow="STOKKODU" msprop:Generator_ColumnPropNameInTable="STOKKODUColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKKODU" msprop:Generator_UserColumnName="STOKKODU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKADI" msprop:Generator_ColumnPropNameInRow="STOKADI" msprop:Generator_ColumnPropNameInTable="STOKADIColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKADI" msprop:Generator_UserColumnName="STOKADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKBARKOD" msprop:Generator_ColumnPropNameInRow="STOKBARKOD" msprop:Generator_ColumnPropNameInTable="STOKBARKODColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBARKOD" msprop:Generator_UserColumnName="STOKBARKOD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKBIRIM" msprop:Generator_ColumnPropNameInRow="STOKBIRIM" msprop:Generator_ColumnPropNameInTable="STOKBIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBIRIM" msprop:Generator_UserColumnName="STOKBIRIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BIRIMFIYAT" msprop:Generator_ColumnPropNameInRow="BIRIMFIYAT" msprop:Generator_ColumnPropNameInTable="BIRIMFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIMFIYAT" msprop:Generator_UserColumnName="BIRIMFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV" msprop:Generator_ColumnPropNameInRow="KDV" msprop:Generator_ColumnPropNameInTable="KDVColumn" msprop:Generator_ColumnVarNameInTable="columnKDV" msprop:Generator_UserColumnName="KDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MIKTAR" msprop:Generator_ColumnPropNameInRow="MIKTAR" msprop:Generator_ColumnPropNameInTable="MIKTARColumn" msprop:Generator_ColumnVarNameInTable="columnMIKTAR" msprop:Generator_UserColumnName="MIKTAR" type="xs:int" minOccurs="0" />
+              <xs:element name="TOPLAM" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="TOPLAM" msprop:Generator_ColumnPropNameInTable="TOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnTOPLAM" msprop:Generator_UserColumnName="TOPLAM" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Irsaliye" msprop:Generator_RowClassName="IrsaliyeRow" msprop:Generator_RowEvHandlerName="IrsaliyeRowChangeEventHandler" msprop:Generator_RowDeletedName="IrsaliyeRowDeleted" msprop:Generator_RowDeletingName="IrsaliyeRowDeleting" msprop:Generator_RowEvArgName="IrsaliyeRowChangeEvent" msprop:Generator_TablePropName="Irsaliye" msprop:Generator_RowChangedName="IrsaliyeRowChanged" msprop:Generator_RowChangingName="IrsaliyeRowChanging" msprop:Generator_TableClassName="IrsaliyeDataTable" msprop:Generator_UserTableName="Irsaliye" msprop:Generator_TableVarName="tableIrsaliye">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BARKOD" msprop:Generator_ColumnPropNameInRow="BARKOD" msprop:Generator_ColumnPropNameInTable="BARKODColumn" msprop:Generator_ColumnVarNameInTable="columnBARKOD" msprop:Generator_UserColumnName="BARKOD" type="xs:string" minOccurs="0" />
+              <xs:element name="STOKKODU" msprop:Generator_ColumnPropNameInRow="STOKKODU" msprop:Generator_ColumnPropNameInTable="STOKKODUColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKKODU" msprop:Generator_UserColumnName="STOKKODU" type="xs:string" minOccurs="0" />
+              <xs:element name="STOKADI" msprop:Generator_ColumnPropNameInRow="STOKADI" msprop:Generator_ColumnPropNameInTable="STOKADIColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKADI" msprop:Generator_UserColumnName="STOKADI" type="xs:string" minOccurs="0" />
+              <xs:element name="BIRIM" msprop:Generator_ColumnPropNameInRow="BIRIM" msprop:Generator_ColumnPropNameInTable="BIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIM" msprop:Generator_UserColumnName="BIRIM" type="xs:string" minOccurs="0" />
+              <xs:element name="MIKTAR" msprop:Generator_ColumnPropNameInRow="MIKTAR" msprop:Generator_ColumnPropNameInTable="MIKTARColumn" msprop:Generator_ColumnVarNameInTable="columnMIKTAR" msprop:Generator_UserColumnName="MIKTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIRIMFIYAT" msprop:Generator_ColumnPropNameInRow="BIRIMFIYAT" msprop:Generator_ColumnPropNameInTable="BIRIMFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnBIRIMFIYAT" msprop:Generator_UserColumnName="BIRIMFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDV" msprop:Generator_ColumnPropNameInRow="KDV" msprop:Generator_ColumnPropNameInTable="KDVColumn" msprop:Generator_ColumnVarNameInTable="columnKDV" msprop:Generator_UserColumnName="KDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAM" msprop:Generator_ColumnPropNameInRow="TOPLAM" msprop:Generator_ColumnPropNameInTable="TOPLAMColumn" msprop:Generator_ColumnVarNameInTable="columnTOPLAM" msprop:Generator_UserColumnName="TOPLAM" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TBL_STOKLAR" msprop:Generator_RowEvHandlerName="TBL_STOKLARRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_STOKLARRowDeleted" msprop:Generator_RowDeletingName="TBL_STOKLARRowDeleting" msprop:Generator_RowEvArgName="TBL_STOKLARRowChangeEvent" msprop:Generator_TablePropName="TBL_STOKLAR" msprop:Generator_RowChangedName="TBL_STOKLARRowChanged" msprop:Generator_RowChangingName="TBL_STOKLARRowChanging" msprop:Generator_TableClassName="TBL_STOKLARDataTable" msprop:Generator_RowClassName="TBL_STOKLARRow" msprop:Generator_TableVarName="tableTBL_STOKLAR" msprop:Generator_UserTableName="TBL_STOKLAR">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STOKBARKOD" msprop:Generator_ColumnPropNameInRow="STOKBARKOD" msprop:Generator_ColumnPropNameInTable="STOKBARKODColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBARKOD" msprop:Generator_UserColumnName="STOKBARKOD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKKODU" msprop:Generator_ColumnPropNameInRow="STOKKODU" msprop:Generator_ColumnPropNameInTable="STOKKODUColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKKODU" msprop:Generator_UserColumnName="STOKKODU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKADI" msprop:Generator_ColumnPropNameInRow="STOKADI" msprop:Generator_ColumnPropNameInTable="STOKADIColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKADI" msprop:Generator_UserColumnName="STOKADI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKBIRIM" msprop:Generator_ColumnPropNameInRow="STOKBIRIM" msprop:Generator_ColumnPropNameInTable="STOKBIRIMColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKBIRIM" msprop:Generator_UserColumnName="STOKBIRIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOKALISFIYAT" msprop:Generator_ColumnPropNameInRow="STOKALISFIYAT" msprop:Generator_ColumnPropNameInTable="STOKALISFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKALISFIYAT" msprop:Generator_UserColumnName="STOKALISFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKSATISFIYAT" msprop:Generator_ColumnPropNameInRow="STOKSATISFIYAT" msprop:Generator_ColumnPropNameInTable="STOKSATISFIYATColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKSATISFIYAT" msprop:Generator_UserColumnName="STOKSATISFIYAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKALISKDV" msprop:Generator_ColumnPropNameInRow="STOKALISKDV" msprop:Generator_ColumnPropNameInTable="STOKALISKDVColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKALISKDV" msprop:Generator_UserColumnName="STOKALISKDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKSATISKDV" msprop:Generator_ColumnPropNameInRow="STOKSATISKDV" msprop:Generator_ColumnPropNameInTable="STOKSATISKDVColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKSATISKDV" msprop:Generator_UserColumnName="STOKSATISKDV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="STOKGRUPID" msprop:Generator_ColumnPropNameInRow="STOKGRUPID" msprop:Generator_ColumnPropNameInTable="STOKGRUPIDColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKGRUPID" msprop:Generator_UserColumnName="STOKGRUPID" type="xs:int" minOccurs="0" />
+              <xs:element name="STOKRESIM" msprop:Generator_ColumnPropNameInRow="STOKRESIM" msprop:Generator_ColumnPropNameInTable="STOKRESIMColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKRESIM" msprop:Generator_UserColumnName="STOKRESIM" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="STOKSAVEUSER" msprop:Generator_ColumnPropNameInRow="STOKSAVEUSER" msprop:Generator_ColumnPropNameInTable="STOKSAVEUSERColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKSAVEUSER" msprop:Generator_UserColumnName="STOKSAVEUSER" type="xs:int" minOccurs="0" />
+              <xs:element name="STOKSAVEDATE" msprop:Generator_ColumnPropNameInRow="STOKSAVEDATE" msprop:Generator_ColumnPropNameInTable="STOKSAVEDATEColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKSAVEDATE" msprop:Generator_UserColumnName="STOKSAVEDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="STOKEDITUSER" msprop:Generator_ColumnPropNameInRow="STOKEDITUSER" msprop:Generator_ColumnPropNameInTable="STOKEDITUSERColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKEDITUSER" msprop:Generator_UserColumnName="STOKEDITUSER" type="xs:int" minOccurs="0" />
+              <xs:element name="STOKEDITTIME" msprop:Generator_ColumnPropNameInRow="STOKEDITTIME" msprop:Generator_ColumnPropNameInTable="STOKEDITTIMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTOKEDITTIME" msprop:Generator_UserColumnName="STOKEDITTIME" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBL_STOKLAR" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
