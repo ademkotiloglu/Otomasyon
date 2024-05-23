@@ -57,6 +57,7 @@ namespace DXApplication2.Modul_Banka
                       where s.BANKAID == BankaID
                       select s;
             Liste.DataSource = lst;
+            Liste.Enabled = true;
           
         }
 
@@ -67,8 +68,12 @@ namespace DXApplication2.Modul_Banka
             {
                 try
                 {
+if (islemID != null) { Mesajlar.hata123("Hesap Hareketi Bulunamadı .."); }
+                if (islemID == null)
+                {
                     islemID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                     EvrakTURU = gridView1.GetFocusedRowCellValue("EVRAKTURU").ToString();
+                }
                 }
                 catch (Exception)
                 {

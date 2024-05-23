@@ -221,6 +221,7 @@
             // 
             this.Liste.ContextMenuStrip = this.SagTik;
             this.Liste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Liste.Enabled = false;
             gridLevelNode1.RelationName = "Level1";
             this.Liste.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});

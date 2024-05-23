@@ -7,6 +7,7 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.CodeParser;
 
 namespace DXApplication2.Modul_Kasa
 {
@@ -49,11 +50,12 @@ namespace DXApplication2.Modul_Kasa
                       where s.KASAID == KasaID
                       select s;
             Liste.DataSource = lst;
+            Liste.Enabled = true;
         }
         
         void DurumGetir()
         {
-            Fonksiyonlar.VW_KASADURUM Kasa = db.VW_KASADURUMs.First(s => s.KASAID == KasaID);
+            Fonksiyonlar.VW_KASADURUM Kasa = db.VW_KASADURUM.First(s => s.ID == KasaID);
             txtGiris.Text = Kasa.GIRIS.Value.ToString();
             txtCikis.Text = Kasa.CIKIS.Value.ToString();
             txtBakiye.Text = Kasa.BAKIYE.Value.ToString();
@@ -73,6 +75,7 @@ namespace DXApplication2.Modul_Kasa
         {
             try
             {
+
                 HareketID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
                 try
                 {
@@ -134,8 +137,25 @@ namespace DXApplication2.Modul_Kasa
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            listele();
+           
             DurumGetir();
+        }
+
+        private void frmKasaHareketleri_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+
+            int ID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+
+            sec();
+            if (EvrakTURU == "Satış Faturası" || EvrakTURU == "Alış Faturası" || EvrakTURU =="Satış İade Faturası" || EvrakTURU =="Alış İade Faturası") 
+            {
+                Mesajlar.hata123("Evrak Türü Fatura Olan Kayıtlar Fatura Listesi Bölümünden Düzenlenebilir ..");
+            }
         }
     }
 }

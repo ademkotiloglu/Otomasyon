@@ -666,6 +666,18 @@
     <Compile Include="Modul_Fatura\rprSatisFaturasi.Designer.cs">
       <DependentUpon>rprSatisFaturasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modul_Hatirlatma\frmHatirlatmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Hatirlatma\frmHatirlatmalar.Designer.cs">
+      <DependentUpon>frmHatirlatmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Hatirlatma\frmYeniHatirlatma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Hatirlatma\frmYeniHatirlatma.Designer.cs">
+      <DependentUpon>frmYeniHatirlatma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modul_HizliSatis\frmDetayGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -902,6 +914,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Fatura\rprSatisFaturasi.resx">
       <DependentUpon>rprSatisFaturasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Hatirlatma\frmHatirlatmalar.resx">
+      <DependentUpon>frmHatirlatmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Hatirlatma\frmYeniHatirlatma.resx">
+      <DependentUpon>frmYeniHatirlatma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_HizliSatis\frmDetayGoster.resx">
       <DependentUpon>frmDetayGoster.cs</DependentUpon>
@@ -1559,6 +1577,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ekle321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mkho-Christmas-Bell.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thvg-Popcorn-Plus.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconshock-Real-Vista-Project-Managment-Task-notes.32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Double-J-Design-Origami-Colored-Pencil-Red-mail-send.16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

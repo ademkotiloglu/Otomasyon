@@ -116,14 +116,6 @@
       <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.VW_KASADURUM" Member="VW_KASADURUMs">
-    <Type Name="VW_KASADURUM">
-      <Column Name="KASAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.VW_KASAHAREKETLERI" Member="VW_KASAHAREKETLERIs">
     <Type Name="VW_KASAHAREKETLERI">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -140,17 +132,6 @@
       <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-    </Type>
-  </Table>
-  <Table Name="dbo.VW_KASALISTESI" Member="VW_KASALISTESIs">
-    <Type Name="VW_KASALISTESI">
-      <Column Name="KASAKODU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="KASAADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.TBL_BANKALAR" Member="TBL_BANKALARs">
@@ -541,6 +522,34 @@
       <Column Name="StokOk" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="CariOk" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="BankaOk" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KASADURUM" Member="VW_KASADURUM">
+    <Type Name="VW_KASADURUM">
+      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KASALISTESI" Member="VW_KASALISTESI">
+    <Type Name="VW_KASALISTESI">
+      <Column Name="KASAKODU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KASAADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_HATIRLATMA" Member="TBL_HATIRLATMA">
+    <Type Name="TBL_HATIRLATMA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOTUNUZ" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GELECEKTARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ONEM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace DXApplication2
         public AnaForm()
         {
             InitializeComponent();
-           
+
         }
 
         public AnaForm(Fonksiyonlar.TBL_KULLANICILAR GelenKullanici)
@@ -305,7 +306,7 @@ namespace DXApplication2
             Application.Exit();
         }
 
-       
+
         #endregion
 
         private void BtnKullanici_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -393,11 +394,12 @@ namespace DXApplication2
 
         }
 
-     
+
 
         private void AnaForm_Load(object sender, EventArgs e)
         {
             formlar.logo();
+            hatirlaticidurumu();
             Lic lic = new Lic();
             var lisans = db.TBL_LISASNS.FirstOrDefault();
             txtlisansdurum.Caption = lisans.DURUMU;
@@ -464,6 +466,52 @@ namespace DXApplication2
         {
             formlar.HizliSatisRapor();
         }
+
+        private void barButtonItem46_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.hatirlaticiekle();
+        }
+
+        private void barButtonItem47_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.hatirlaticilar();
+        }
+
+        private void barStaticItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            var reminders = from r in db.TBL_HATIRLATMA
+                            where r.GELECEKTARIH == today
+                            select r;
+            if (reminders.Any())
+            {
+
+                formlar.hatirlaticilar();
+            }
+            else
+            {
+                Fonksiyonlar.Mesajlar adem = new Fonksiyonlar.Mesajlar();
+                adem.hata123("Bugüne ait hatırlatıcı yok !");
+             }
+        }
+
+        void hatirlaticidurumu()
+        {
+            DateTime today = DateTime.Today;
+            var reminders = from r in db.TBL_HATIRLATMA
+                            where r.GELECEKTARIH == today
+                            select r;
+            if (reminders.Any())
+            {
+            
+                barStaticItem3.Caption = " Bugüne Ait Hatırlatma Var !";
+            }
+            else
+            {
+                barStaticItem3.Caption = "Bugüne Ait Hatırlatma Yok !";
+            }
+        }
     }
-    }
+}
+
 

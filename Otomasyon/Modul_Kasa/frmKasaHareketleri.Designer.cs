@@ -205,6 +205,7 @@
             // 
             this.Liste.ContextMenuStrip = this.SagTik;
             this.Liste.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Liste.Enabled = false;
             gridLevelNode1.RelationName = "Level1";
             this.Liste.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
@@ -287,6 +288,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
+            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
             // CIKIS
             // 
@@ -370,7 +372,7 @@
             this.KeyPreview = true;
             this.Name = "frmKasaHareketleri";
             this.Text = "Kasa Hareketleri";
-            this.Load += new System.EventHandler(this.DevirKartiDuzenle_Click);
+            this.Load += new System.EventHandler(this.frmKasaHareketleri_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmKasaHareketleri_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtBakiye.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCikis.Properties)).EndInit();

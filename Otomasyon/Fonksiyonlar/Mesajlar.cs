@@ -16,6 +16,12 @@ namespace DXApplication2.Fonksiyonlar
             
 
         }
+        public void hata123(string Mesaj)
+        {
+            MesajForm.Mesaj("Uyarı !", Mesaj);
+
+
+        }
         public void deneme(string Mesaj)
         {
             MesajForm.Mesaj("Uyarı", Mesaj);

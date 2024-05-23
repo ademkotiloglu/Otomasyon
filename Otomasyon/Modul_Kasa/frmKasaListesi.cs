@@ -28,7 +28,7 @@ namespace DXApplication2.Modul_Kasa
 
         void Listele()
         {
-            var lst = from s in db.VW_KASALISTESIs
+            var lst = from s in db.VW_KASALISTESI
                       where s.KASAKODU.Contains(txtKasaKodu.Text) && s.KASAADI.Contains(txtKasaAdi.Text)
                       select s;
             Liste.DataSource = lst;

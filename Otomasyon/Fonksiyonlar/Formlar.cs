@@ -33,6 +33,18 @@ namespace DXApplication2.Fonksiyonlar
             Modul_Ayar.frmTeraziAyar frm = new Modul_Ayar.frmTeraziAyar();
             frm.ShowDialog();
         }
+
+        public void hatirlaticiekle()
+        {
+            Modul_Hatirlatma.frmYeniHatirlatma frm =new Modul_Hatirlatma.frmYeniHatirlatma();
+            frm.ShowDialog();
+        }
+
+        public void hatirlaticilar()
+        {
+            Modul_Hatirlatma.frmHatirlatmalar frm = new Modul_Hatirlatma.frmHatirlatmalar();
+            frm.ShowDialog();
+        }
         public void sirketayar()
         {
             Modul_Ayar.frmSirketBilgileri frm = new Modul_Ayar.frmSirketBilgileri();

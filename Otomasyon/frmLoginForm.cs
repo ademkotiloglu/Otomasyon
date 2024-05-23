@@ -22,7 +22,7 @@ namespace DXApplication2
 {
     public partial class frmLoginForm : DevExpress.XtraEditors.XtraForm
     {
-        Fonksiyonlar.DatabaseDataContext db = new Fonksiyonlar.DatabaseDataContext();
+        DatabaseDataContext db = new Fonksiyonlar.DatabaseDataContext();
         Fonksiyonlar.Mesajlar Mesajlar = new Fonksiyonlar.Mesajlar();
         Fonksiyonlar.Formlar Formlar = new Fonksiyonlar.Formlar();
         public int v = 1;
