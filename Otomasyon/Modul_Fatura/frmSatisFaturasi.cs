@@ -176,7 +176,7 @@ namespace DXApplication2.Modul_Fatura
                 txtIrsaliyeTarih.EditValue = db.TBL_IRSALIYELERs.First(s => s.ID == Fatura.IRSALIYEID.Value).TARIHI.Value.ToShortDateString();
                 txtCariAdi.Text = db.TBL_CARILERs.First(s => s.CARIKODU == Fatura.CARIKODU).CARIADI;
                 label18.Text = db.TBL_CARILERs.First(s => s.CARIKODU == Fatura.CARIKODU).ID.ToString();
-               
+               //textBox1.Text = db.TBL_FATURALAR.First(s => s.ID == Fatura.ID).ID.ToString();
                 if (Fatura.ODEMEYERI == "Kasa")
                 {
                     
@@ -445,7 +445,7 @@ namespace DXApplication2.Modul_Fatura
                     kasahareket.TARIH = DateTime.Parse(txtFaturaTarihi.Text);
                     kasahareket.EVRAKTURU = "Satış Faturası";
                     kasahareket.EVRAKID = fatura.ID;
-                    kasahareket.GCKODU = "C";
+                    kasahareket.GCKODU = "G";
                     kasahareket.TUTAR = decimal.Parse(txtGenelToplam.Text);
                     kasahareket.CARIID = CariID;
                     kasahareket.ACIKLAMA = txtFaturaNo.Text + "No ' lu Fatura";
@@ -555,6 +555,9 @@ namespace DXApplication2.Modul_Fatura
                 if (checkBox1.Checked == true)
                 {
                     fatura.KasaOk = "True";
+                    db.SubmitChanges();
+                    db.TBL_KASAHAREKETLERIs.DeleteAllOnSubmit(db.TBL_KASAHAREKETLERIs.Where(s => s.EVRAKID == FaturaID));
+                    db.SubmitChanges();
                     Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
                     kasahareket.KASAID = Convert.ToInt32(label19.Text);
                     kasahareket.BELGENO = txtFaturaNo.Text;
@@ -584,6 +587,9 @@ namespace DXApplication2.Modul_Fatura
                 if (checkBox2.Checked == true)
                 {
                     fatura.BankaOk = "True";
+                    db.SubmitChanges();
+                    db.VW_BANKAHAREKETLERI.DeleteAllOnSubmit(db.VW_BANKAHAREKETLERI.Where(s => s.EVRAKID == FaturaID));
+                    db.SubmitChanges();
                     Fonksiyonlar.TBL_BANKAHAREKETLERI bankahareket = new Fonksiyonlar.TBL_BANKAHAREKETLERI();
                     bankahareket.BANKAID = BankaID;
                     bankahareket.CARIID = Convert.ToInt32(label18.Text);
@@ -615,6 +621,9 @@ namespace DXApplication2.Modul_Fatura
                 if (checkBox3.Checked == true)
                 {
                     fatura.CariOk = "True";
+                    db.SubmitChanges();
+                   
+                    db.TBL_CARIHAREKETLERIs.DeleteAllOnSubmit(db.TBL_CARIHAREKETLERIs.Where(s => s.EVRAKID == FaturaID));
                     db.SubmitChanges();
                     Fonksiyonlar.TBL_CARIHAREKETLERI carihareket1 = new Fonksiyonlar.TBL_CARIHAREKETLERI();
                     carihareket1.ACIKLAMA = txtFaturaNo.Text + "No ' lu Satış Faturası";
@@ -717,6 +726,7 @@ namespace DXApplication2.Modul_Fatura
                     carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
                     carihareket.ALACAK = decimal.Parse(txtGenelToplam.Text);
                 }
+                
                 carihareket.EDITDATE = DateTime.Now;
                 carihareket.EDITUSER = AnaForm.UserID;
                 db.SubmitChanges();

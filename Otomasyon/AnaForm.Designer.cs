@@ -100,6 +100,7 @@
             this.barButtonItem46 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem47 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem48 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -245,9 +246,10 @@
             this.barButtonItem45,
             this.barButtonItem46,
             this.barButtonItem47,
-            this.barStaticItem3});
+            this.barStaticItem3,
+            this.barButtonItem48});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 81;
+            this.ribbonControl1.MaxItemId = 82;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.barStaticItem3);
             this.ribbonControl1.PageHeaderItemLinks.Add(this.Hakkımızda);
@@ -625,7 +627,7 @@
             // 
             this.barButtonItem34.Caption = "Hızlı Satış";
             this.barButtonItem34.Id = 54;
-            this.barButtonItem34.ImageOptions.LargeImage = global::DXApplication2.Properties.Resources.hizli;
+            this.barButtonItem34.ImageOptions.LargeImage = global::DXApplication2.Properties.Resources.Hopstarter_Soft_Scraps_Button_Blank_Red_32;
             this.barButtonItem34.Name = "barButtonItem34";
             this.barButtonItem34.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem34_ItemClick_1);
             // 
@@ -776,8 +778,15 @@
             this.barStaticItem3.Caption = "barStaticItem3";
             this.barStaticItem3.Id = 80;
             this.barStaticItem3.Name = "barStaticItem3";
-            this.barStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barStaticItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem3_ItemClick);
+            // 
+            // barButtonItem48
+            // 
+            this.barButtonItem48.Caption = "Kasa Seçimi";
+            this.barButtonItem48.Id = 81;
+            this.barButtonItem48.ImageOptions.LargeImage = global::DXApplication2.Properties.Resources.Robsonbillponte_Happy_Holidays_Case_128;
+            this.barButtonItem48.Name = "barButtonItem48";
+            this.barButtonItem48.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem48_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -958,6 +967,7 @@
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem36);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem37);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem38);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem48);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Ayarlar";
             // 
@@ -1516,6 +1526,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem46;
         private DevExpress.XtraBars.BarButtonItem barButtonItem47;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem48;
     }
 }
 

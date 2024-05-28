@@ -49,12 +49,12 @@
             this.alisduzenle = new System.Windows.Forms.ToolStripMenuItem();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.dbaslangic = new System.Windows.Forms.DateTimePicker();
             this.txtFaturaNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtFaturaTuru = new DevExpress.XtraEditors.ComboBoxEdit();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.dbaslangic = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Liste)).BeginInit();
             this.SagTik.SuspendLayout();
@@ -224,6 +224,13 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(234, 471);
             this.xtraTabPage1.Text = "Arama";
             // 
+            // dbaslangic
+            // 
+            this.dbaslangic.Location = new System.Drawing.Point(23, 126);
+            this.dbaslangic.Name = "dbaslangic";
+            this.dbaslangic.Size = new System.Drawing.Size(181, 21);
+            this.dbaslangic.TabIndex = 8;
+            // 
             // txtFaturaNo
             // 
             this.txtFaturaNo.Location = new System.Drawing.Point(23, 80);
@@ -287,13 +294,6 @@
             this.splitContainerControl1.SplitterPosition = 240;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Text = "splitContainerControl1";
-            // 
-            // dbaslangic
-            // 
-            this.dbaslangic.Location = new System.Drawing.Point(23, 126);
-            this.dbaslangic.Name = "dbaslangic";
-            this.dbaslangic.Size = new System.Drawing.Size(181, 21);
-            this.dbaslangic.TabIndex = 8;
             // 
             // frmFaturaListesi
             // 

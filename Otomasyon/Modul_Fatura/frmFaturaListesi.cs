@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.CodeParser;
+using DXApplication2.Fonksiyonlar;
 
 namespace DXApplication2.Modul_Fatura
 {
@@ -15,6 +16,7 @@ namespace DXApplication2.Modul_Fatura
     {
         Fonksiyonlar.DatabaseDataContext db = new Fonksiyonlar.DatabaseDataContext();
         Fonksiyonlar.Formlar Formlar = new Fonksiyonlar.Formlar();
+        Fonksiyonlar.Mesajlar Mesajlar = new Fonksiyonlar.Mesajlar();
         public bool secim = true;
         int HareketID = -1;
         int EvrakID = -1;
@@ -22,23 +24,23 @@ namespace DXApplication2.Modul_Fatura
         public frmFaturaListesi()
         {
             InitializeComponent();
-            
-            
+
+
         }
 
         private void frmFaturaListesi_Load(object sender, EventArgs e)
         {
             listeletumu1();
         }
-        
+
         void listele()
         {
             DateTime baslangic = DateTime.Parse(dbaslangic.Value.ToShortDateString());
             var lst = from s in db.TBL_FATURALAR
-                          where s.FATURATURU.Contains(txtFaturaTuru.Text) && s.FATURANO.Contains(txtFaturaNo.Text) && s.TARIHI == baslangic
+                      where s.FATURATURU.Contains(txtFaturaTuru.Text) && s.FATURANO.Contains(txtFaturaNo.Text) && s.TARIHI == baslangic
                       select s;
-                Liste.DataSource = lst;
-            
+            Liste.DataSource = lst;
+
         }
         void listeletumu()
         {
@@ -56,28 +58,40 @@ namespace DXApplication2.Modul_Fatura
                       select s;
             Liste.DataSource = lst;
         }
+
         private void btnAra_Click(object sender, EventArgs e)
         {
             try
             {
-               if (txtFaturaTuru.Text == "Tümü");
+                
+                if (txtFaturaTuru.Text == "Satış İade Faturası") 
+                listele();
+                if (txtFaturaTuru.Text == "Alış İade Faturası") 
+                listele();
+                if (txtFaturaTuru.Text == "Satış Faturası") 
+                listele();
+                if (txtFaturaTuru.Text == "Alış Faturası") 
+                listele();
+                if (txtFaturaTuru.Text == "Sıcak Satış") 
+                listele();
+                if (txtFaturaTuru.Text == "Tümü") 
                 listeletumu();
             }
             catch
             {
                 listele();
             }
-            
+
         }
 
         private void txtFaturaTuru_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            
+
             int ID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
 
             sec();
@@ -96,6 +110,10 @@ namespace DXApplication2.Modul_Fatura
             else if (EvrakTURU == "Satış İade Faturası")
             {
                 Formlar.iFatura(true, ID, false);
+            }
+            else if (EvrakTURU == "Sıcak Satış")
+            {
+                Mesajlar.hata123("Sıcak Satış Faturası Düzenlenemez !");
             }
         }
         void sec()
@@ -156,15 +174,6 @@ namespace DXApplication2.Modul_Fatura
             }
         }
 
-        
-
-    
-
-       
-
-       
-
-      
 
     }
 }

@@ -474,6 +474,12 @@
     <Compile Include="Modul_Ayar\frmGeriYukle.Designer.cs">
       <DependentUpon>frmGeriYukle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modul_Ayar\frmKasaSeçimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Ayar\frmKasaSeçimi.Designer.cs">
+      <DependentUpon>frmKasaSeçimi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modul_Ayar\frmSirketBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -497,6 +503,12 @@
     </Compile>
     <Compile Include="Modul_Ayar\frmYedekle.Designer.cs">
       <DependentUpon>frmYedekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\frmBankaAcilisDuzen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\frmBankaAcilisDuzen.Designer.cs">
+      <DependentUpon>frmBankaAcilisDuzen.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Banka\frmBankaAcilisKarti.cs">
       <SubType>Form</SubType>
@@ -678,6 +690,12 @@
     <Compile Include="Modul_Hatirlatma\frmYeniHatirlatma.Designer.cs">
       <DependentUpon>frmYeniHatirlatma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modul_HizliSatis\frmCariSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_HizliSatis\frmCariSec.Designer.cs">
+      <DependentUpon>frmCariSec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modul_HizliSatis\frmDetayGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -689,6 +707,12 @@
     </Compile>
     <Compile Include="Modul_HizliSatis\frmGelirGider.Designer.cs">
       <DependentUpon>frmGelirGider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_HizliSatis\frmKasaSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_HizliSatis\frmKasaSec.Designer.cs">
+      <DependentUpon>frmKasaSec.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_HizliSatis\frmNumarator.cs">
       <SubType>Form</SubType>
@@ -743,6 +767,12 @@
     </Compile>
     <Compile Include="Modul_Kasa\frmKasaTahsilat.Designer.cs">
       <DependentUpon>frmKasaTahsilat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Kasa\tblKasaAcilisDuzen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\tblKasaAcilisDuzen.Designer.cs">
+      <DependentUpon>tblKasaAcilisDuzen.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Kullanici\frmKullaniciPanel.cs">
       <SubType>Form</SubType>
@@ -819,6 +849,9 @@
     <EmbeddedResource Include="Modul_Ayar\frmGeriYukle.resx">
       <DependentUpon>frmGeriYukle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Ayar\frmKasaSeçimi.resx">
+      <DependentUpon>frmKasaSeçimi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modul_Ayar\frmSirketBilgileri.resx">
       <DependentUpon>frmSirketBilgileri.cs</DependentUpon>
     </EmbeddedResource>
@@ -830,6 +863,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Ayar\frmYedekle.resx">
       <DependentUpon>frmYedekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\frmBankaAcilisDuzen.resx">
+      <DependentUpon>frmBankaAcilisDuzen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Banka\frmBankaAcilisKarti.resx">
       <DependentUpon>frmBankaAcilisKarti.cs</DependentUpon>
@@ -921,11 +957,17 @@
     <EmbeddedResource Include="Modul_Hatirlatma\frmYeniHatirlatma.resx">
       <DependentUpon>frmYeniHatirlatma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modul_HizliSatis\frmCariSec.resx">
+      <DependentUpon>frmCariSec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modul_HizliSatis\frmDetayGoster.resx">
       <DependentUpon>frmDetayGoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_HizliSatis\frmGelirGider.resx">
       <DependentUpon>frmGelirGider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_HizliSatis\frmKasaSec.resx">
+      <DependentUpon>frmKasaSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_HizliSatis\frmNumarator.resx">
       <DependentUpon>frmNumarator.cs</DependentUpon>
@@ -953,6 +995,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Kasa\frmKasaTahsilat.resx">
       <DependentUpon>frmKasaTahsilat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\tblKasaAcilisDuzen.resx">
+      <DependentUpon>tblKasaAcilisDuzen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Kullanici\frmKullaniciPanel.resx">
       <DependentUpon>frmKullaniciPanel.cs</DependentUpon>
@@ -1589,6 +1634,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Double-J-Design-Origami-Colored-Pencil-Red-mail-send.16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robsonbillponte-Happy-Holidays-Case.16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robsonbillponte-Happy-Holidays-Case.128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Button-Blank-Red.32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -268,6 +268,11 @@ namespace DXApplication2.Fonksiyonlar
             Modul_Banka.frmBankaAcilisKarti frm = new Modul_Banka.frmBankaAcilisKarti();
             frm.ShowDialog();
         }
+        public void BankaAcilisDuzen(bool ac = false)
+        {
+            Modul_Banka.frmBankaAcilisDuzen frm = new Modul_Banka.frmBankaAcilisDuzen();
+            frm.ShowDialog();
+        }
         public int BankaHareketleri(bool ac = false, int ID = -1)
         {
             Modul_Banka.frmBankaHareketleri frm = new Modul_Banka.frmBankaHareketleri();
@@ -368,6 +373,12 @@ namespace DXApplication2.Fonksiyonlar
             Modul_Kasa.frmKasaAcilis frm = new Modul_Kasa.frmKasaAcilis();
             frm.ShowDialog();
         }
+        public void KasaAcilisDuzen(bool ac = false)
+        {
+            Modul_Kasa.tblKasaAcilisDuzen frm = new Modul_Kasa.tblKasaAcilisDuzen();
+            frm.ShowDialog();
+        }
+
         public void KasaTahsilat(bool ac = false, int ID = -1)
         {
             Modul_Kasa.frmKasaTahsilat frm = new Modul_Kasa.frmKasaTahsilat();
@@ -617,6 +628,66 @@ namespace DXApplication2.Fonksiyonlar
             Modul_HizliSatis.HizliSatisRapor frm = new Modul_HizliSatis.HizliSatisRapor();
             frm.MdiParent = AnaForm.ActiveForm;
             frm.Show();
+        }
+
+        public void VarsayilanKasa(bool ac = false)
+        {
+            Modul_Ayar.frmKasaSeçimi frm = new Modul_Ayar.frmKasaSeçimi();
+            frm.ShowDialog();
+        }
+
+        
+
+
+        public int kasasec(bool secim = false)
+        {
+            Modul_HizliSatis.frmKasaSec frm = new Modul_HizliSatis.frmKasaSec();
+            if (secim)
+            {
+                frm.Secim = true;
+                frm.ShowDialog();
+            }
+            else
+            {
+                foreach (DevExpress.XtraEditors.XtraForm K in AnaForm.ActiveForm.MdiChildren)
+                {
+                    if (K.Text == "Kasa Listesi")
+                    {
+                        K.BringToFront();
+                        return AnaForm.aktarma;
+                    }
+                }
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+
+            }
+            return AnaForm.aktarma;
+
+        }
+        public int varsayilancari(bool secim = false)
+        {
+            Modul_HizliSatis.frmCariSec frm = new Modul_HizliSatis.frmCariSec();
+            if (secim)
+            {
+                frm.Secim = true;
+                frm.ShowDialog();
+            }
+            else
+            {
+                foreach (DevExpress.XtraEditors.XtraForm K in AnaForm.ActiveForm.MdiChildren)
+                {
+                    if (K.Text == "Cari Listesi")
+                    {
+                        K.BringToFront();
+                        return AnaForm.aktarma;
+                    }
+                }
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+
+            }
+            return AnaForm.aktarma;
+
         }
     }
 

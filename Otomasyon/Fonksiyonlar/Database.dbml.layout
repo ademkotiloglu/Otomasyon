@@ -218,5 +218,11 @@
         <elementListCompartment Id="6472ce7c-4032-4489-a639-e2f943699286" absoluteBounds="0.76500000000000012, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="6b361b99-bbab-4f06-90b6-00d8ffa7d135" absoluteBounds="4.875, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DatabaseDataContext/TBL_VARSAYILANKASA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efdb16e4-717a-4542-97fd-4bb3b0dbfd98" absoluteBounds="4.89, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

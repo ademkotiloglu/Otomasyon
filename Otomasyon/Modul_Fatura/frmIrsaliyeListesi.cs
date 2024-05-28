@@ -63,8 +63,12 @@ namespace DXApplication2.Modul_Fatura
         {
             try
             {
-                if (txtFaturaTuru.Text == "Tümü") ;
+                if (txtFaturaTuru.Text == "Tümü") 
                 listeletumu();
+                if (txtFaturaTuru.Text == "Satış İrsaliyesi")
+                    listele();
+                if (txtFaturaTuru.Text == "Alış İrsaliyesi")
+                    listele();
             }
             catch
             {

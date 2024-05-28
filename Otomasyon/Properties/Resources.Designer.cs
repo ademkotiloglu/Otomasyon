@@ -923,6 +923,16 @@ namespace DXApplication2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Button_Blank_Red_32 {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Button-Blank-Red.32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Iconshock_Real_Vista_Project_Managment_Task_notes_32 {
             get {
                 object obj = ResourceManager.GetObject("Iconshock-Real-Vista-Project-Managment-Task-notes.32", resourceCulture);
@@ -1306,6 +1316,26 @@ namespace DXApplication2.Properties {
         internal static System.Drawing.Bitmap restore4854 {
             get {
                 object obj = ResourceManager.GetObject("restore4854", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Robsonbillponte_Happy_Holidays_Case_128 {
+            get {
+                object obj = ResourceManager.GetObject("Robsonbillponte-Happy-Holidays-Case.128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Robsonbillponte_Happy_Holidays_Case_16 {
+            get {
+                object obj = ResourceManager.GetObject("Robsonbillponte-Happy-Holidays-Case.16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

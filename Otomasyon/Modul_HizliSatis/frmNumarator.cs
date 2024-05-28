@@ -53,10 +53,14 @@ namespace DXApplication2.Modul_HizliSatis
                     double nakit = Islemler.DoubleYap(txtnumarator.Text);
                     double geneltoplam = Islemler.DoubleYap(f.txtgeneltoplam.Text);
                     double kart = geneltoplam - nakit;
+                f.label5.Visible = true;
+                f.label8.Visible = true;
                     f.lblnakit.Text = nakit.ToString("C2");
                     f.lblkredi.Text = kart.ToString("C2");
                      f.satisyap1("Kart-Nakit");
                     this.Hide();
+                f.label5.Visible = false;
+                f.label8.Visible = false;
                    
                 
             }

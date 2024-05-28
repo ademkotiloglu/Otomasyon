@@ -7,12 +7,14 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DXApplication2.Fonksiyonlar;
 
 namespace DXApplication2.Modul_Kasa
 {
     public partial class frmKasaListesi : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.DatabaseDataContext db = new Fonksiyonlar.DatabaseDataContext();
+        Fonksiyonlar.Formlar Formlar = new Fonksiyonlar.Formlar();
 
         public bool Secim = false;
         int SecimID = -1;
@@ -26,7 +28,7 @@ namespace DXApplication2.Modul_Kasa
             Listele();
         }
 
-        void Listele()
+        public void Listele()
         {
             var lst = from s in db.VW_KASALISTESI
                       where s.KASAKODU.Contains(txtKasaKodu.Text) && s.KASAADI.Contains(txtKasaAdi.Text)
@@ -75,6 +77,11 @@ namespace DXApplication2.Modul_Kasa
             {
                 this.Close();
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Formlar.KasaAcilisDuzen();
         }
     }
 }

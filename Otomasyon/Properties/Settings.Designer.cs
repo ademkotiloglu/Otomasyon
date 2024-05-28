@@ -165,5 +165,16 @@ namespace DXApplication2.Properties {
                 return ((string)(this["OtomasyonConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HVI3QJA\\SQLEXPRESS;Initial Catalog=Otomasyon;User ID=SA;Passw" +
+            "ord=1234;TrustServerCertificate=True")]
+        public string OtomasyonConnectionString1 {
+            get {
+                return ((string)(this["OtomasyonConnectionString1"]));
+            }
+        }
     }
 }

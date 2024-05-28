@@ -169,9 +169,6 @@
   <data name="Sil32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sil32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Senet_MusteriLst32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Senet_MusteriLst32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="solidworks-1024x768-wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\solidworks-1024x768-wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,9 +214,6 @@
   <data name="Cek_Cariye16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cek_Cariye16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Senet_Bordro16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Senet_Bordro16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Kasa_Tahsilat32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Tahsilat32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -246,6 +240,9 @@
   </data>
   <data name="Iconshock-Real-Vista-Project-Managment-Task-notes.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconshock-Real-Vista-Project-Managment-Task-notes.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banka_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ara321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ara321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,6 +277,9 @@
   <data name="tl_482" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tl_482.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Robsonbillponte-Happy-Holidays-Case.128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robsonbillponte-Happy-Holidays-Case.128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cari_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cari_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -297,9 +297,6 @@
   </data>
   <data name="Chrome32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chrome32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exit32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exit32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Yeni24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Yeni24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -333,6 +330,9 @@
   </data>
   <data name="satisyap4854" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\satisyap4854.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Siparis_Iptal32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Siparis_Iptal32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BankaEFT32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BankaEFT32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,6 +388,9 @@
   <data name="Banka32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="excel4854" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel4854.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Senet_Kendi16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Senet_Kendi16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -418,9 +421,6 @@
   <data name="exit4854" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit4854.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Senet_Bankaya16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Senet_Bankaya16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Stok32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -435,6 +435,9 @@
   </data>
   <data name="remove1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fatura32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fatura32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fatura_AlisIade16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fatura_AlisIade16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -508,6 +511,9 @@
   <data name="ayar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ayar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Robsonbillponte-Happy-Holidays-Case.16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Robsonbillponte-Happy-Holidays-Case.16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="goz24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goz24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -519,6 +525,9 @@
   </data>
   <data name="Siparis_Onaylanan32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Siparis_Onaylanan32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kasa_Karti16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Karti16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stok48541" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stok48541.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -544,8 +553,8 @@
   <data name="Banka_Islem16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka_Islem16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="excel4854" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\excel4854.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Senet_Bankaya16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Senet_Bankaya16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Word32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Word32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -571,8 +580,8 @@
   <data name="Sil24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sil24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Siparis_Iptal32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Siparis_Iptal32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Senet_MusteriLst32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Senet_MusteriLst32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cek_Musteri16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cek_Musteri16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -585,9 +594,6 @@
   </data>
   <data name="Thvg-Popcorn-Plus.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thvg-Popcorn-Plus.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Senet_Bordro32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Senet_Bordro32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rapor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rapor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -604,11 +610,11 @@
   <data name="Kasa_Karti32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Karti32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fatura32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fatura32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banka_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banka_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Senet_Bordro32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Senet_Bordro32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clear4848" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clear4848.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -649,8 +655,8 @@
   <data name="Banka_Havale16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka_Havale16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kasa_Karti16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kasa_Karti16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Senet_Bordro16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Senet_Bordro16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fatura_Satis32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fatura_Satis32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -669,5 +675,8 @@
   </data>
   <data name="Double-J-Design-Origami-Colored-Pencil-Red-mail-send.16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Double-J-Design-Origami-Colored-Pencil-Red-mail-send.16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hopstarter-Soft-Scraps-Button-Blank-Red.32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hopstarter-Soft-Scraps-Button-Blank-Red.32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

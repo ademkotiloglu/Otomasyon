@@ -96,44 +96,42 @@ namespace DXApplication2.Fonksiyonlar
     partial void InsertTBL_HATIRLATMA(TBL_HATIRLATMA instance);
     partial void UpdateTBL_HATIRLATMA(TBL_HATIRLATMA instance);
     partial void DeleteTBL_HATIRLATMA(TBL_HATIRLATMA instance);
-        #endregion
-
-
-
-        public DatabaseDataContext() :
-                    base(global::DXApplication2.Properties.Settings.Default.cs1 + Properties.Settings.Default.cs_Sunucu + Properties.Settings.Default.cs2 +
-    Properties.Settings.Default.cs_Database + Properties.Settings.Default.cs3 + Properties.Settings.Default.cs_UserID +
-    Properties.Settings.Default.cs4 + Properties.Settings.Default.cs_Password
-    , mappingSource)
-        {
-            OnCreated();
-        }
-
-        public DatabaseDataContext(string connection) :
-                base(connection, mappingSource)
-        {
-            OnCreated();
-        }
-
-        public DatabaseDataContext(System.Data.IDbConnection connection) :
-                base(connection, mappingSource)
-        {
-            OnCreated();
-        }
-
-        public DatabaseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
-                base(connection, mappingSource)
-        {
-            OnCreated();
-        }
-
-        public DatabaseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
-                base(connection, mappingSource)
-        {
-            OnCreated();
-        }
-
-        public System.Data.Linq.Table<TBL_STOKLAR> TBL_STOKLARs
+    partial void InsertTBL_VARSAYILANKASA(TBL_VARSAYILANKASA instance);
+    partial void UpdateTBL_VARSAYILANKASA(TBL_VARSAYILANKASA instance);
+    partial void DeleteTBL_VARSAYILANKASA(TBL_VARSAYILANKASA instance);
+    #endregion
+		
+		public DatabaseDataContext() : 
+				base(global::DXApplication2.Properties.Settings.Default.OtomasyonConnectionString1, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DatabaseDataContext(string connection) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DatabaseDataContext(System.Data.IDbConnection connection) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DatabaseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DatabaseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<TBL_STOKLAR> TBL_STOKLARs
 		{
 			get
 			{
@@ -418,6 +416,14 @@ namespace DXApplication2.Fonksiyonlar
 			get
 			{
 				return this.GetTable<TBL_HATIRLATMA>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_VARSAYILANKASA> TBL_VARSAYILANKASA
+		{
+			get
+			{
+				return this.GetTable<TBL_VARSAYILANKASA>();
 			}
 		}
 	}
@@ -10215,6 +10221,116 @@ namespace DXApplication2.Fonksiyonlar
 					this._ONEM = value;
 					this.SendPropertyChanged("ONEM");
 					this.OnONEMChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_VARSAYILANKASA")]
+	public partial class TBL_VARSAYILANKASA : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _KASA;
+		
+		private System.Nullable<int> _KASAID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnKASAChanging(string value);
+    partial void OnKASAChanged();
+    partial void OnKASAIDChanging(System.Nullable<int> value);
+    partial void OnKASAIDChanged();
+    #endregion
+		
+		public TBL_VARSAYILANKASA()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASA", DbType="NVarChar(50)")]
+		public string KASA
+		{
+			get
+			{
+				return this._KASA;
+			}
+			set
+			{
+				if ((this._KASA != value))
+				{
+					this.OnKASAChanging(value);
+					this.SendPropertyChanging();
+					this._KASA = value;
+					this.SendPropertyChanged("KASA");
+					this.OnKASAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASAID", DbType="Int")]
+		public System.Nullable<int> KASAID
+		{
+			get
+			{
+				return this._KASAID;
+			}
+			set
+			{
+				if ((this._KASAID != value))
+				{
+					this.OnKASAIDChanging(value);
+					this.SendPropertyChanging();
+					this._KASAID = value;
+					this.SendPropertyChanged("KASAID");
+					this.OnKASAIDChanged();
 				}
 			}
 		}

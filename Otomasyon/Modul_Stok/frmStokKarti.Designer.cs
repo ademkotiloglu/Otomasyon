@@ -51,7 +51,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtAlisFiyat = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtAlisKdv = new DevExpress.XtraEditors.TextEdit();
             this.txtSatisKdv = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -72,6 +71,7 @@
             this.txtParcaKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.txtGrupKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.txtStokBirim = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtAlisKdv = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
@@ -81,7 +81,6 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAlisKdv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSatisKdv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -91,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtParcaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrupKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokBirim.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAlisKdv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl3
@@ -285,10 +285,12 @@
             // 
             // txtSatisFiyat
             // 
+            this.txtSatisFiyat.EditValue = "";
             this.txtSatisFiyat.Location = new System.Drawing.Point(86, 90);
             this.txtSatisFiyat.Name = "txtSatisFiyat";
             this.txtSatisFiyat.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtSatisFiyat.Properties.MaskSettings.Set("mask", "c");
+            this.txtSatisFiyat.Properties.UseMaskAsDisplayFormat = false;
             this.txtSatisFiyat.Size = new System.Drawing.Size(152, 20);
             this.txtSatisFiyat.TabIndex = 2;
             // 
@@ -312,10 +314,12 @@
             // 
             // txtAlisFiyat
             // 
+            this.txtAlisFiyat.EditValue = "";
             this.txtAlisFiyat.Location = new System.Drawing.Point(86, 38);
             this.txtAlisFiyat.Name = "txtAlisFiyat";
             this.txtAlisFiyat.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtAlisFiyat.Properties.MaskSettings.Set("mask", "c");
+            this.txtAlisFiyat.Properties.UseMaskAsDisplayFormat = false;
             this.txtAlisFiyat.Size = new System.Drawing.Size(152, 20);
             this.txtAlisFiyat.TabIndex = 0;
             // 
@@ -327,15 +331,6 @@
             this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 1;
             this.label9.Text = "Alış Fiyatı ";
-            // 
-            // txtAlisKdv
-            // 
-            this.txtAlisKdv.Location = new System.Drawing.Point(86, 64);
-            this.txtAlisKdv.Name = "txtAlisKdv";
-            this.txtAlisKdv.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtAlisKdv.Properties.MaskSettings.Set("mask", "P");
-            this.txtAlisKdv.Size = new System.Drawing.Size(152, 20);
-            this.txtAlisKdv.TabIndex = 1;
             // 
             // txtSatisKdv
             // 
@@ -528,6 +523,15 @@
             this.txtStokBirim.Size = new System.Drawing.Size(155, 20);
             this.txtStokBirim.TabIndex = 4;
             // 
+            // txtAlisKdv
+            // 
+            this.txtAlisKdv.Location = new System.Drawing.Point(86, 64);
+            this.txtAlisKdv.Name = "txtAlisKdv";
+            this.txtAlisKdv.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtAlisKdv.Properties.MaskSettings.Set("mask", "P");
+            this.txtAlisKdv.Size = new System.Drawing.Size(152, 20);
+            this.txtAlisKdv.TabIndex = 1;
+            // 
             // frmStokKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,7 +561,6 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAlisKdv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSatisKdv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -568,6 +571,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtParcaKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrupKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStokBirim.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAlisKdv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,7 +594,6 @@
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.TextEdit txtAlisFiyat;
         private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.TextEdit txtAlisKdv;
         private DevExpress.XtraEditors.TextEdit txtSatisKdv;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit txtStokBarkod;
@@ -617,5 +620,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private DevExpress.XtraEditors.TextEdit txtAlisKdv;
     }
 }

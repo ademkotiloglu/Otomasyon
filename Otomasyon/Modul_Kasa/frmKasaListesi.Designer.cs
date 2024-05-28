@@ -33,6 +33,7 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnAra = new DevExpress.XtraEditors.SimpleButton();
             this.txtKasaAdi = new System.Windows.Forms.TextBox();
@@ -94,6 +95,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.simpleButton1);
             this.xtraTabPage1.Controls.Add(this.btnSil);
             this.xtraTabPage1.Controls.Add(this.btnAra);
             this.xtraTabPage1.Controls.Add(this.txtKasaAdi);
@@ -103,6 +105,16 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(234, 471);
             this.xtraTabPage1.Text = "Arama";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = global::DXApplication2.Properties.Resources.Senet_Cariye32x32;
+            this.simpleButton1.Location = new System.Drawing.Point(23, 189);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(181, 36);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Yeni Kasa Ekle";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnSil
             // 
@@ -298,5 +310,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn GIRIS;
         private DevExpress.XtraGrid.Columns.GridColumn CIKIS;
         private DevExpress.XtraGrid.Columns.GridColumn ACIKLAMA;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

@@ -17652,15 +17652,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
-        "ProductCode" = "8:{A881214D-D0AC-41E2-B64A-CFC45F4870C3}"
-        "PackageCode" = "8:{00B97409-C4BD-43ED-B102-B4AE23B6C5F7}"
-        "UpgradeCode" = "8:{B52A9B0B-75BF-4A8C-A959-3F0C58CB3897}"
+        "ProductCode" = "8:{6916FEEF-FDDE-49BB-8071-B98645C1ABF9}"
+        "PackageCode" = "8:{11F6D534-63BA-4FEC-BB77-84A16870374E}"
+        "UpgradeCode" = "8:{B0B290C9-BBF0-4B75-A331-356A70F0C7CC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.5.1"
+        "ProductVersion" = "8:1.5.2"
         "Manufacturer" = "8:Default Company Name"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -17800,7 +17800,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_1BC89C3AD5E54535BD0D924C9BCF6B95"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Bitti"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFinishedDlg.wid"
@@ -17837,7 +17837,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_0AC4180355AC4661943B7D3EF845C74F"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Bitti"
+                    "DisplayName" = "8:Finished"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFinishedDlg.wid"
@@ -17881,7 +17881,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_9B63B61F9376402E9E2588D4C612C34D"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:İlerleme Durumu"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdProgressDlg.wid"
@@ -17925,7 +17925,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_DF5ABF668B614B0CBDBD71285794AC0A"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:İlerleme Durumu"
+                    "DisplayName" = "8:Progress"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminProgressDlg.wid"
@@ -17975,7 +17975,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_211DC9D9A0E74CB18CD4CB360F7C5D6C"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Yüklemeyi Onayla"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminConfirmDlg.wid"
@@ -17997,7 +17997,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_6C2D44101F844C1AB1CA4B3441D818EA"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Hoş Geldiniz"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminWelcomeDlg.wid"
@@ -18045,7 +18045,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_7EC8F0E6FD49474A921E0E7ECB26E991"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Yükleme Klasörü"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFolderDlg.wid"
@@ -18076,7 +18076,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_08F4235C63824E99909A9CE4121D2625"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Yüklemeyi Onayla"
+                    "DisplayName" = "8:Confirm Installation"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdConfirmDlg.wid"
@@ -18098,7 +18098,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_493F8FEA6EDD43D89ABE7DEFF8A3C181"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Hoş Geldiniz"
+                    "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdWelcomeDlg.wid"
@@ -18146,7 +18146,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_52196915B8E7407FB2887675F0F080BA"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Yükleme Klasörü"
+                    "DisplayName" = "8:Installation Folder"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"

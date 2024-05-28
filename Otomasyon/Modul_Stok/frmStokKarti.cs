@@ -48,7 +48,7 @@ namespace DXApplication2.Modul_Stok
     {
         txtParcaKodu.Text = Numaralar.StokKodNumarasi('S');
         txtAlisFiyat.Text = "0";
-        txtAlisKdv.Text = "0";
+            txtAlisKdv.Text = "0";
         txtresimkutusu.Image = null;
         txtGrupAdi.Text = "";
         txtGrupKodu.Text = "";

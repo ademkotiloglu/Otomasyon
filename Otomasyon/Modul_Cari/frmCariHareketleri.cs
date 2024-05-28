@@ -29,7 +29,7 @@ namespace DXApplication2.Modul_Cari
 
         private void frmCariHareketleri_Load(object sender, EventArgs e)
         {
-            listele();
+          
         }
         void listele()
         {
@@ -50,7 +50,7 @@ namespace DXApplication2.Modul_Cari
             }
             catch (Exception e)
             {
-                Mesajlar.Hata(e);
+                Mesajlar.hata123("Seçilen Cariye Ait Hareket Yok ..");
             }
         }
         void DurumGetir()

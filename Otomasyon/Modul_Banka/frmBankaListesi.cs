@@ -81,7 +81,7 @@ namespace DXApplication2.Modul_Banka
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Formlar.BankaAcilisi();
+            Formlar.BankaAcilisDuzen();
         }
     }
 }

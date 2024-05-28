@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Otomasyon" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HVI3QJA\SQLEXPRESS;Initial Catalog=Otomasyon;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DXApplication2.Properties.Settings" SettingsPropertyName="OtomasyonConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-HVI3QJA\SQLEXPRESS;Initial Catalog=Otomasyon;User ID=SA;Trust Server Certificate=True" SettingsObjectName="DXApplication2.Properties.Settings" SettingsPropertyName="OtomasyonConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TBL_STOKLAR" Member="TBL_STOKLARs">
     <Type Name="TBL_STOKLAR">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -550,6 +550,13 @@
       <Column Name="TARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="GELECEKTARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ONEM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_VARSAYILANKASA" Member="TBL_VARSAYILANKASA">
+    <Type Name="TBL_VARSAYILANKASA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KASA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KASAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

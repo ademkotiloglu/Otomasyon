@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraRichEdit.Model.History;
+﻿using DevExpress.XtraReports.Serialization;
+using DevExpress.XtraRichEdit.Model.History;
 using DXApplication2.Fonksiyonlar;
 using Lisans;
 using System;
@@ -505,11 +506,17 @@ namespace DXApplication2
             {
             
                 barStaticItem3.Caption = " Bugüne Ait Hatırlatma Var !";
+                barStaticItem3.ImageOptions.Image = Properties.Resources.Double_J_Design_Origami_Colored_Pencil_Red_mail_send_16;
             }
             else
             {
                 barStaticItem3.Caption = "Bugüne Ait Hatırlatma Yok !";
             }
+        }
+
+        private void barButtonItem48_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formlar.VarsayilanKasa();
         }
     }
 }

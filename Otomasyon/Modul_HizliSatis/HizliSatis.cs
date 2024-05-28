@@ -26,6 +26,8 @@ namespace DXApplication2.Modul_HizliSatis
         Fonksiyonlar.Numara Numaralar = new Fonksiyonlar.Numara();
         int FaturaID = -1;
         int IrsaliyeID = -1;
+        int KasaID = -1;
+        int cariID = -1;
           
         public HizliSatis()
         {
@@ -149,7 +151,15 @@ namespace DXApplication2.Modul_HizliSatis
             
                 label4.Text = Numaralar.FaturaNo('F');
             label9.Text = Numaralar.IrsaliyeNo('I');
-           
+            var firstRecord = db.TBL_VARSAYILANKASA.FirstOrDefault();
+            if (firstRecord != null)
+                label11.Text = firstRecord.KASA.ToString();
+            label12.Text = firstRecord.KASAID.ToString();
+            if (firstRecord == null)
+                label11.Text = "-Yok-";
+            if (cariID == -1)
+                label14.Text = "Genel Müşteri";
+            label15.Text = "-1";
             hizlibutondoldur();
             ilksatir();
             b5.Text = 5.ToString("C2");
@@ -255,14 +265,20 @@ namespace DXApplication2.Modul_HizliSatis
                             }
                             else
                             {
-                                Console.Beep(900, 2000);
-                                MessageBox.Show("Kg Ürün Ekleme Sayfası");
+                                Console.Beep(900, 500);
+                                DialogResult sorgu = new DialogResult();
+                                sorgu = MessageBox.Show("Stok Bulunamadı .. Yeni Ürün Eklensin mi ?", "Stok Bulunamadı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                if (sorgu == DialogResult.Yes)
+                                { formlar.StokKarti(); }
                             }
                         }
                         else
                         {
-                            Console.Beep(900, 2000);
-                            MessageBox.Show("Normal Ürün Ekleme Sayfası");
+                            Console.Beep(900, 500);
+                            DialogResult sorgu = new DialogResult();
+                            sorgu = MessageBox.Show("Stok Bulunamadı .. Yeni Ürün Eklensin mi ?", "Stok Bulunamadı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (sorgu == DialogResult.Yes)
+                            { formlar.StokKarti(); }
                         }
                     }
                 }
@@ -431,41 +447,45 @@ namespace DXApplication2.Modul_HizliSatis
                    
 
                 };
-                Fonksiyonlar.TBL_FATURALAR[] fatura = new Fonksiyonlar.TBL_FATURALAR[dataGridView1.RowCount];
-                for (int i = 0; i < dataGridView1.RowCount; i++)
-                {
+               
+                Fonksiyonlar.TBL_FATURALAR fatura = new Fonksiyonlar.TBL_FATURALAR();
+                
 
-                    fatura[i] = new Fonksiyonlar.TBL_FATURALAR();
-                    fatura[i].FATURATURU = "Sıcak Satış";
-                    fatura[i].FATURANO = label4.Text;
-                    fatura[i].CARIKODU = "Genel Müşteri";
-                    fatura[i].TARIHI = DateTime.Now;
-                    fatura[i].ACIKLAMA = islemno + "Numaralı Hızlı Satış İşlemi";
-                    fatura[i].GENELTOPLAM = decimal.Parse(dataGridView1.Rows[i].Cells["Tutar"].Value.ToString());
-                    fatura[i].SAVEUSER = AnaForm.UserID;
-                    fatura[i].SAVEDATE = DateTime.Now;
-                    fatura[i].IRSALIYEID = IrsaliyeID;
-                    db.TBL_FATURALAR.InsertOnSubmit(fatura[i]);
+                    fatura = new Fonksiyonlar.TBL_FATURALAR();
+                    fatura.FATURATURU = "Sıcak Satış";
+                    fatura.FATURANO = label4.Text;
+                if (Convert.ToInt32(label15.Text) == -1)
+                { fatura.CARIKODU = "Genel Müşteri"; }
+                if (Convert.ToInt32(label15.Text)!= -1)
+                { fatura.CARIKODU = label16.Text; }
+                    fatura.TARIHI = DateTime.Today;
+                    fatura.ACIKLAMA = islemno + "Numaralı Hızlı Satış İşlemi";
+                var geneltpl = Islemler.DoubleYap(txtgeneltoplam.Text);
+                fatura.GENELTOPLAM = decimal.Parse(geneltpl.ToString());
+                fatura.SAVEUSER = AnaForm.UserID;
+                    fatura.SAVEDATE = DateTime.Now;
+                    fatura.IRSALIYEID = IrsaliyeID;
+                    db.TBL_FATURALAR.InsertOnSubmit(fatura);
                     db.SubmitChanges();
-                    FaturaID = fatura[i].ID;
-                };
-                if (IrsaliyeID < 0)
-                    for (int i = 0; i < dataGridView1.RowCount; i++)
-                    {
+                    FaturaID = fatura.ID;
+                
+               // if (IrsaliyeID < 0)
+                //    for (int i = 0; i < dataGridView1.RowCount; i++)
+                   // {
 
-                        Fonksiyonlar.TBL_IRSALIYELER irsaliye = new Fonksiyonlar.TBL_IRSALIYELER();
-                        irsaliye.FATURAID = fatura[i].ID;
-                        irsaliye.IRSALIYENO = label9.Text;
-                        irsaliye.CARIKODU = "Genel Müşteri";
-                        irsaliye.TARIHI = DateTime.Now;
-                        irsaliye.SAVEUSER = AnaForm.UserID;
-                        irsaliye.SAVEDATE = DateTime.Now;
-                        db.TBL_IRSALIYELERs.InsertOnSubmit(irsaliye);
-                        db.SubmitChanges();
-                        IrsaliyeID = irsaliye.ID;
-                        fatura[i].IRSALIYEID = IrsaliyeID;
+                      //  Fonksiyonlar.TBL_IRSALIYELER irsaliye = new Fonksiyonlar.TBL_IRSALIYELER();
+                      //  irsaliye.FATURAID = fatura.ID;
+                     //   irsaliye.IRSALIYENO = label9.Text;
+                     //   irsaliye.CARIKODU = "Genel Müşteri";
+                     //   irsaliye.TARIHI = DateTime.Now;
+                     //   irsaliye.SAVEUSER = AnaForm.UserID;
+                     //   irsaliye.SAVEDATE = DateTime.Now;
+                    //    db.TBL_IRSALIYELERs.InsertOnSubmit(irsaliye);
+                     //   db.SubmitChanges();
+                    //    IrsaliyeID = irsaliye.ID;
+                     //   fatura.IRSALIYEID = IrsaliyeID;
 
-                    }
+                   // }
 
                 Fonksiyonlar.TBL_STOKHAREKETLERI[] stokhareketi = new Fonksiyonlar.TBL_STOKHAREKETLERI[dataGridView1.RowCount];
                     for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -486,12 +506,49 @@ namespace DXApplication2.Modul_HizliSatis
                         db.TBL_STOKHAREKETLERIs.InsertOnSubmit(stokhareketi[i]);
                         db.SubmitChanges();
 
-
-                    };
                 
 
-              
-                    Fonksiyonlar.TBL_HIZLISATISRAPOR io = new TBL_HIZLISATISRAPOR();
+                    };
+                //burdakasa
+                Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+
+                
+                    kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+                    kasahareket.KASAID = Convert.ToInt32(label12.Text);
+                    kasahareket.BELGENO = label4.Text;
+                    kasahareket.TARIH = DateTime.Today;
+                    kasahareket.EVRAKTURU = "Sıcak Satış";
+                kasahareket.EVRAKID = fatura.ID;
+                kasahareket.GCKODU = "G";
+                kasahareket.CARIID = Convert.ToInt32(label15.Text);
+                kasahareket.TUTAR = decimal.Parse(geneltpl.ToString());
+                kasahareket.ACIKLAMA = label4.Text + "No ' lu Sıcak Satış";
+                    kasahareket.SAVEDATE = DateTime.Now;
+                    kasahareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_KASAHAREKETLERIs.InsertOnSubmit(kasahareket);
+                    db.SubmitChanges();
+                //buradacari
+                if (cariID > 0)
+                {
+                    Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = new Fonksiyonlar.TBL_CARIHAREKETLERI();
+                    carihareket.ACIKLAMA = label4.Text + "No ' lu Satış Faturası";
+
+                    carihareket.ALACAK = 0;
+                    carihareket.BORC = decimal.Parse(geneltpl.ToString());
+
+                    carihareket.CARIID = Convert.ToInt32(label15.Text);
+                    carihareket.TARIH = DateTime.Now;
+                    carihareket.TIPI = "SF";
+                    carihareket.EVRAKTURU = "Sıcak Satış Faturası";
+                    carihareket.EVRAKID = fatura.ID;
+                    carihareket.SAVEDATE = DateTime.Now;
+                    carihareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_CARIHAREKETLERIs.InsertOnSubmit(carihareket);
+                    db.SubmitChanges();
+                }
+                //buradacaribitti
+
+                Fonksiyonlar.TBL_HIZLISATISRAPOR io = new TBL_HIZLISATISRAPOR();
                 io.ISLEMNO = islemno;
                 io.IADE = false;
                 io.ALISFOYATTOPLAM = Islemler.DoubleYap(txtgeneltoplam.Text);
@@ -562,6 +619,87 @@ namespace DXApplication2.Modul_HizliSatis
                     db.SubmitChanges();
 
                 }
+                //iade
+                Fonksiyonlar.TBL_FATURALAR fatura = new Fonksiyonlar.TBL_FATURALAR();
+
+
+                fatura = new Fonksiyonlar.TBL_FATURALAR();
+                fatura.FATURATURU = "Sıcak Satış İade";
+                fatura.FATURANO = label4.Text;
+                if (Convert.ToInt32(label15.Text) == -1)
+                { fatura.CARIKODU = "Genel Müşteri"; }
+                if (Convert.ToInt32(label15.Text) != -1)
+                { fatura.CARIKODU = label16.Text; }
+                fatura.TARIHI = DateTime.Today;
+                fatura.ACIKLAMA = islemno + "Numaralı Hızlı Satış İşlemi";
+                var geneltpl = Islemler.DoubleYap(txtgeneltoplam.Text);
+                fatura.GENELTOPLAM = decimal.Parse(geneltpl.ToString());
+                fatura.SAVEUSER = AnaForm.UserID;
+                fatura.SAVEDATE = DateTime.Now;
+                fatura.IRSALIYEID = IrsaliyeID;
+                db.TBL_FATURALAR.InsertOnSubmit(fatura);
+                db.SubmitChanges();
+                FaturaID = fatura.ID;
+
+               // if (IrsaliyeID < 0)
+                //    for (int i = 0; i < dataGridView1.RowCount; i++)
+                 //   {
+
+                    //    Fonksiyonlar.TBL_IRSALIYELER irsaliye = new Fonksiyonlar.TBL_IRSALIYELER();
+                    //    irsaliye.FATURAID = fatura.ID;
+                    //    irsaliye.IRSALIYENO = label9.Text;
+                    //    irsaliye.CARIKODU = "Genel Müşteri";
+                    //    irsaliye.TARIHI = DateTime.Now;
+                    //    irsaliye.SAVEUSER = AnaForm.UserID;
+                     //   irsaliye.SAVEDATE = DateTime.Now;
+                    //    db.TBL_IRSALIYELERs.InsertOnSubmit(irsaliye);
+                     //   db.SubmitChanges();
+                    //    IrsaliyeID = irsaliye.ID;
+                   //     fatura.IRSALIYEID = IrsaliyeID;
+
+                  //  }
+
+
+
+
+                //burdakasa
+                Fonksiyonlar.TBL_KASAHAREKETLERI kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+
+
+                kasahareket = new Fonksiyonlar.TBL_KASAHAREKETLERI();
+                kasahareket.KASAID = Convert.ToInt32(label12.Text);
+                kasahareket.BELGENO = label4.Text;
+                kasahareket.TARIH = DateTime.Today;
+                kasahareket.EVRAKTURU = "Sıcak Satış İade";
+                kasahareket.EVRAKID = fatura.ID;
+                kasahareket.GCKODU = "C";
+                kasahareket.CARIID = Convert.ToInt32(label15.Text);
+                kasahareket.TUTAR = decimal.Parse(geneltpl.ToString());
+                kasahareket.ACIKLAMA = label4.Text + "No ' lu Sıcak Satış";
+                kasahareket.SAVEDATE = DateTime.Now;
+                kasahareket.SAVEUSER = AnaForm.UserID;
+                db.TBL_KASAHAREKETLERIs.InsertOnSubmit(kasahareket);
+                db.SubmitChanges();
+                //buradacari
+                if (cariID > 0)
+                {
+                    Fonksiyonlar.TBL_CARIHAREKETLERI carihareket = new Fonksiyonlar.TBL_CARIHAREKETLERI();
+                    carihareket.ACIKLAMA = label4.Text + "No ' lu Satış Faturası";
+
+                    carihareket.ALACAK = decimal.Parse(geneltpl.ToString());
+                    carihareket.BORC = 0;
+
+                    carihareket.CARIID = Convert.ToInt32(label15.Text);
+                    carihareket.TARIH = DateTime.Now;
+                    carihareket.TIPI = "SIF";
+                    carihareket.EVRAKTURU = "Sıcak Satış İade Faturası";
+                    carihareket.EVRAKID = fatura.ID;
+                    carihareket.SAVEDATE = DateTime.Now;
+                    carihareket.SAVEUSER = AnaForm.UserID;
+                    db.TBL_CARIHAREKETLERIs.InsertOnSubmit(carihareket);
+                    db.SubmitChanges();
+                }
+                //buradacaribitti
 
                 Fonksiyonlar.TBL_STOKHAREKETLERI[] stokhareketi = new Fonksiyonlar.TBL_STOKHAREKETLERI[dataGridView1.RowCount];
                 for (int i = 0; i < dataGridView1.RowCount; i++)
@@ -613,7 +751,14 @@ namespace DXApplication2.Modul_HizliSatis
                 var islemnoartir = db.TBL_HIZLISATISYAP.First();
                 islemnoartir.IslemNo += 1;
                 db.SubmitChanges();
-                MessageBox.Show("Yazdırma İşlemi Yapınız..!");
+                if (cyazdirma.Checked)
+                {
+                    Yazdir yazdir = new Yazdir(islemno);
+                    yazdir.IslemNo = islemno;
+                    yazdir.YazdirmayaBasla();
+
+                }
+                temizle();
 
             }
         }
@@ -713,8 +858,71 @@ namespace DXApplication2.Modul_HizliSatis
            
 
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+        void KasaAc(int ID)
+        {
+            try
+            {
+                KasaID = ID;
+               
+                label11.Text = db.TBL_KASALARs.First(s => s.ID == KasaID).KASAADI.ToString();
+                label12.Text = db.TBL_KASALARs.First(s => s.ID == KasaID).ID.ToString();
+            }
+            catch (Exception)
+            {
+                KasaID = -1;
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            int Id = formlar.kasasec(true);
+            if (Id > 0)
+            {
+                KasaAc(Id);
+                AnaForm.aktarma = -1;
+            }
+        }
+        void CariSec(int ID)
+        {
+            try
+            {
+                cariID = ID;
+                Fonksiyonlar.TBL_CARILER cari = db.TBL_CARILERs.First(s => s.ID == cariID);
+                label15.Text = cari.ID.ToString();
+                label14.Text = cari.CARIADI;
+                label16.Text = cari.CARIKODU.ToString();
+
+
+            }
+            catch (Exception)
+            {
+                cariID = -1;
+            }
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int Id = formlar.varsayilancari(true);
+            if (Id > 0)
+            {
+                CariSec(Id);
+                AnaForm.aktarma = -1;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            label14.Text = "Genel Müşteri";
+            label15.Text = "-1";
+            label16.Text = "-1";
+        }
     }
-}
+    }
+
 
 
 
