@@ -102,7 +102,9 @@ namespace DXApplication2.Fonksiyonlar
     #endregion
 		
 		public DatabaseDataContext() : 
-				base(global::DXApplication2.Properties.Settings.Default.OtomasyonConnectionString1, mappingSource)
+				base(global::DXApplication2.Properties.Settings.Default.cs1 + Properties.Settings.Default.cs_Sunucu + Properties.Settings.Default.cs2 +
+    Properties.Settings.Default.cs_Database + Properties.Settings.Default.cs3 + Properties.Settings.Default.cs_UserID +
+    Properties.Settings.Default.cs4 + Properties.Settings.Default.cs_Password, mappingSource)
 		{
 			OnCreated();
 		}
